@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './assets/jakmat-logo.png';
 import './JmApp.scss';
+import CopyrightIcon from '@material-ui/icons/Copyright';
 
 class JmApp extends Component {
   render() {
@@ -20,7 +21,8 @@ class JmApp extends Component {
           {/*Content*/}
         </main>
         <footer className="JmApp-footer">
-          <span>jakmat 2021</span>
+          <CopyrightIcon className="JmApp-footer__icon" style={{ fontSize: '1em' }}/>
+          <span>2021 jakmat</span>
         </footer>
       </div>
     );

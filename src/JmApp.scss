@@ -55,5 +55,9 @@
     text-align: right;
     font-size: 0.8em;
     padding: $appPadding;
+
+    .JmApp-footer__icon {
+      margin: 0 3px -2px;
+    }
   }
 }
