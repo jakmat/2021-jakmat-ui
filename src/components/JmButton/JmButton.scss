@@ -1,0 +1,9 @@
+@import '../../styles/common';
+
+.JmButton {
+  width: 250px;
+  text-align: center;
+  background-color: $contentBackgroundColor;
+  padding: $appPadding;
+  border-radius: $appBorderRadius;
+}

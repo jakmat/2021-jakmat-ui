@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './assets/jakmat-logo.png';
+import logo from '../../../assets/jakmat-logo.png';
 import './JmApp.scss';
+import JmNav from "../JmNav/JmNav.js";
 import CopyrightIcon from '@material-ui/icons/Copyright';
 
 class JmApp extends Component {
@@ -15,11 +16,9 @@ class JmApp extends Component {
           </div>
         </header>
         <nav className="JmApp-nav">
-          {/*Navigation*/}
+          <JmNav />
         </nav>
-        <main className="JmApp-main">
-          {/*Content*/}
-        </main>
+        <main className="JmApp-main"></main>
         <footer className="JmApp-footer">
           <CopyrightIcon className="JmApp-footer__icon" style={{ fontSize: '1em' }}/>
           <span>2021 jakmat</span>

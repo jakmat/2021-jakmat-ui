@@ -1,4 +1,4 @@
-@import 'common';
+@import '../../../styles/common';
 
 .JmApp {
   height: 100vh;
@@ -6,11 +6,15 @@
   background-color: $appBackgroundColor;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  //align-items: flex-start;
 
   .JmApp-header {
+    width: 320px;
+    height: 96px;
     display: flex;
+    flex-wrap: wrap;
     color: $appFontColor;
     padding: $appPadding;
 
@@ -38,19 +42,19 @@
   }
 
   .JmApp-nav {
-    display: none;
-    //display: flex;
-    flex-wrap: wrap;
     color: $appFontColor;
-    padding: $appPadding;
   }
 
   .JmApp-main {
+    width: 100vw;
     height: 100%;
     background-color: $contentBackgroundColor;
   }
 
   .JmApp-footer {
+    width: 100vw;
+    height: 55px;
+    background-color: $appBackgroundColor;
     color: $appFontColor;
     text-align: right;
     font-size: 0.8em;

@@ -1,0 +1,10 @@
+@import '../../../styles/common';
+
+.JmNav {
+  display: flex;
+  flex-wrap: wrap;
+
+  .JmButton {
+    margin: $appPadding;
+  }
+}
