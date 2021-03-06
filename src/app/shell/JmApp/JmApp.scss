@@ -7,11 +7,12 @@
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   overflow-y: auto;
 
   .JmApp-header {
     width: 320px;
-    height: 96px;
+    height: $headerHeight;
     display: flex;
     flex-wrap: wrap;
     color: $appFontColor;
@@ -46,13 +47,13 @@
 
   .JmApp-main {
     width: 100vw;
-    height: 82vh;
+    height: $mainHeight;
     background-color: $contentBackgroundColor;
   }
 
   .JmApp-footer {
     width: 100vw;
-    height: 55px;
+    min-height: $footerHeight;
     background-color: $appBackgroundColor;
     color: $appFontColor;
     text-align: right;

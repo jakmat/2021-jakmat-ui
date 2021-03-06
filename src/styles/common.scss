@@ -1,5 +1,13 @@
+// Colors
 $appBackgroundColor: rgba(37, 37, 37, 1);
 $contentBackgroundColor: lighten($appBackgroundColor, 5%);
 $appFontColor: rgba(240, 240, 240, 1);
+
+// Variables
 $appPadding: 20px;
 $appBorderRadius: 3px;
+
+// Shell
+$headerHeight: 96px;
+$footerHeight: 55px;
+$mainHeight: calc(99vh - 96px - 55px);
