@@ -1,10 +1,30 @@
 import React, { Component } from 'react';
 import logo from '../../../assets/jakmat-logo.png';
 import './JmApp.scss';
-import JmNav from "../JmNav/JmNav.js";
+import JmNav from "../JmNav/JmNav.jsx";
+import JmAbout from "../../views/about/JmAbout";
+import JmStack from "../../views/stack/JmStack";
+import JmProjects from "../../views/projects/JmProjects";
 import CopyrightIcon from '@material-ui/icons/Copyright';
+import JmContent from "../JmContent/JmContent";
 
 class JmApp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      contents: {
+        about: JmAbout,
+        stack: JmStack,
+        projects: JmProjects
+      },
+      currentContent: JmAbout
+    }
+    this.handleViewChange = this.handleViewChange.bind(this);
+  }
+  handleViewChange(content) {
+    const currentContent = this.state.contents[content];
+    this.setState(state => ({ currentContent }));
+  }
   render() {
     return (
       <div className="JmApp">
@@ -16,9 +36,11 @@ class JmApp extends Component {
           </div>
         </header>
         <nav className="JmApp-nav">
-          <JmNav />
+          <JmNav onNavClick={this.handleViewChange}/>
         </nav>
-        <main className="JmApp-main"></main>
+        <main className="JmApp-main">
+          <JmContent children={this.state.currentContent()}/>
+        </main>
         <footer className="JmApp-footer">
           <CopyrightIcon className="JmApp-footer__icon" style={{ fontSize: '1em' }}/>
           <span>2021 jakmat</span>
