@@ -15,6 +15,7 @@
     height: $headerHeight;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     color: $appFontColor;
     padding: $appPadding;
 
@@ -49,6 +50,7 @@
     width: 100vw;
     min-height: $mainHeight;
     background-color: $contentBackgroundColor;
+    padding: 0 20px;
   }
 
   .JmApp-footer {

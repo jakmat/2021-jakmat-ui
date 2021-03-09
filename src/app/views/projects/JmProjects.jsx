@@ -15,7 +15,7 @@ function JmProjects() {
   ];
   return (
     <article className="JmProjects">
-      <h3>Projects</h3>
+      <h3>Jobs and Projects</h3>
       <JmList items={projects}/>
     </article>
   );
