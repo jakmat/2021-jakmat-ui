@@ -7,8 +7,10 @@ function JmListItem(props) {
     <li className="JmListItem">
       <img className="JmListItem-avatar" src={avatarSrc}/>
       <div className="JmListItem-details">
-        <h4 className="JmListItem-name">{name}</h4>
-        <h5 className="JmListItem-time">{timeSpan}</h5>
+        <div className="JmListItem-title">
+          <h4 className="JmListItem-name">{name}</h4>
+          <h5 className="JmListItem-time">{timeSpan}</h5>
+        </div>
         <p className="JmListItem-description">{details}</p>
       </div>
     </li>

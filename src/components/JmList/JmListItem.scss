@@ -7,8 +7,10 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
+  //background-color: $appBackgroundColor;
   color: $appFontColor;
-
+  margin-bottom: 20px;
+  margin-right: 20px;
 
   .JmListItem-avatar {
     width: 5em;
@@ -18,27 +20,31 @@
   .JmListItem-details {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 10em;
     height: 5em;
     margin-left: 20px;
 
-    .JmListItem-name {
-      display: block;
-      margin: 0;
-      text-align: left;
-    }
+    .JmListItem-title {
+      .JmListItem-name {
+        display: block;
+        margin: 0;
+        text-align: left;
+        font-size: 13px;
+      }
 
-    .JmListItem-time {
-      display: block;
-      margin: 0;
-      text-align: left;
+      .JmListItem-time {
+        display: block;
+        margin: 0;
+        text-align: left;
+        font-size: 12px;
+      }
     }
 
     .JmListItem-description {
       display: block;
       margin: 10px 0 0;
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 }
