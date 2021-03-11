@@ -4,11 +4,13 @@ import './JmList.scss';
 
 function JmList(props) {
   const items = props.items.map((i) => {
-    const { avatar, name, startYear, endYear, details } = i;
-    const avatarSrc = `../../assets/${avatar}`;
+    const { avatar, name, startYear, endYear, details, url, type } = i;
+    const urlData = url.href ? { ...url, text: `[ ${url.text} ]` } : { ...url };
     const endTime = endYear ? endYear : 'now';
     const timeSpan = `${startYear} - ${endTime}`;
-    const item = { avatarSrc, name, timeSpan, details };
+    const title = name;
+    const subtitle = `${type}: ${timeSpan}`;
+    const item = { avatar, title, subtitle, details, urlData };
     return (<JmListItem item={item} key={i.id} />);
   });
   return (

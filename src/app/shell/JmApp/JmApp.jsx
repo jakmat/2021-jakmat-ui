@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../../../assets/jakmat-logo.png';
 import './JmApp.scss';
 import JmNav from "../JmNav/JmNav.jsx";
 import JmAbout from "../../views/about/JmAbout";
@@ -17,6 +16,7 @@ class JmApp extends Component {
         stack: JmStack,
         projects: JmProjects
       },
+      logoSrc: `${process.env.PUBLIC_URL}/assets/jakmat-webdev.png`,
       currentContent: JmAbout
     }
     this.handleViewChange = this.handleViewChange.bind(this);
@@ -29,7 +29,7 @@ class JmApp extends Component {
     return (
       <div className="JmApp">
         <header className="JmApp-header">
-          <img src={logo} className="JmApp-logo" alt="logo" />
+          <img src={this.state.logoSrc} className="JmApp-logo" alt="logo" />
           <div className="JmApp-headline">
             <h1 className="JmApp-title">Jakub Matusiak</h1>
             <h2 className="JmApp-subtitle">Geospatial Web Developer</h2>
@@ -43,7 +43,7 @@ class JmApp extends Component {
         </main>
         <footer className="JmApp-footer">
           <CopyrightIcon className="JmApp-footer__icon" style={{ fontSize: '1em' }}/>
-          <span>2021 jakmat</span>
+          <span>2020 jakmat</span>
         </footer>
       </div>
     );

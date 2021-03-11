@@ -1,50 +1,68 @@
 @import '../../styles/common';
 
 .JmListItem {
-  min-width: 16em;
-  height: 8em;
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   padding: 20px;
-  //background-color: $appBackgroundColor;
   color: $appFontColor;
   margin-bottom: 20px;
-  margin-right: 20px;
+  //margin-right: 20px;
 
   .JmListItem-avatar {
-    width: 5em;
-    height: 5em;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      max-width: 200px;
+      max-height: 200px;
+    }
   }
 
   .JmListItem-details {
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 10em;
-    height: 5em;
     margin-left: 20px;
 
     .JmListItem-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 18px;
+
       .JmListItem-name {
         display: block;
-        margin: 0;
+        margin: 0 0 10px;
         text-align: left;
-        font-size: 13px;
       }
 
       .JmListItem-time {
         display: block;
         margin: 0;
         text-align: left;
-        font-size: 12px;
+        font-size: 14px;
       }
     }
 
+    .JmListItem-link {
+      width: 200px;
+      text-align: left;
+      color: $appFontColor;
+      font-size: 14px;
+    }
+
     .JmListItem-description {
+      width: 200px;
       display: block;
       margin: 10px 0 0;
-      font-size: 11px;
     }
   }
 }
