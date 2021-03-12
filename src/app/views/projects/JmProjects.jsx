@@ -10,9 +10,7 @@ function JmProjects() {
       endYear: null,
       name: 'Personal Website 2.0',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`,
-        width: '',
-        height: ''
+        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`
       },
       details: 'React-powered personal website and development lab',
       url: {
@@ -27,9 +25,7 @@ function JmProjects() {
       endYear: null,
       name: 'Leica ConX 3D',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/leica-geosystems.jpg`,
-        width: '',
-        height: ''
+        src: `${process.env.PUBLIC_URL}/assets/projects/leica-geosystems.jpg`
       },
       details: '3D map-centered app for managing construction site workflows',
       url: {
@@ -44,9 +40,7 @@ function JmProjects() {
       endYear: 2020,
       name: 'Personal Website 1.0',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`,
-        width: '',
-        height: ''
+        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`
       },
       details: 'Vue-powered personal personal website and development lab',
       url: {
@@ -61,9 +55,7 @@ function JmProjects() {
       endYear: 2018,
       name: 'Polcode',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/polcode.jpg`,
-        width: '',
-        height: ''
+        src: `${process.env.PUBLIC_URL}/assets/projects/polcode.jpg`
       },
       details: 'Multiple frontend assignments',
       url: {
@@ -95,9 +87,7 @@ function JmProjects() {
       endYear: 2016,
       name: 'Retkiński Kebab',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/retkinski-kebab.png`,
-        width: '',
-        height: ''
+        src: `${process.env.PUBLIC_URL}/assets/projects/retkinski-kebab.png`
       },
       details: 'Landing page for Pakistani restaurant',
       url: {
@@ -112,9 +102,7 @@ function JmProjects() {
       endYear: 2017,
       name: 'MOJA SOJA',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/moja-soja.png`,
-        width: '',
-        height: ''
+        src: `${process.env.PUBLIC_URL}/assets/projects/moja-soja.png`
       },
       details: 'Own-branded soybean milk maker home appliance store',
       url: {
@@ -130,8 +118,7 @@ function JmProjects() {
       name: 'Emapa',
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/emapa.png`,
-        width: '180px',
-        height: ''
+        width: '180px'
       },
       details: 'GIS development of maps for driver and tourist navigations',
       url: {
