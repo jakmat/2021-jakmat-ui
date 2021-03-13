@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './JmApp.scss';
 import JmNav from "../JmNav/JmNav.jsx";
+import JmMain from "../JmMain/JmMain";
 import JmAbout from "../../views/about/JmAbout";
 import JmStack from "../../views/stack/JmStack";
 import JmProjects from "../../views/projects/JmProjects";
 import CopyrightIcon from '@material-ui/icons/Copyright';
-import JmContent from "../JmContent/JmContent";
 
 class JmApp extends Component {
   constructor(props) {
@@ -36,9 +36,7 @@ class JmApp extends Component {
           </div>
         </header>
         <JmNav onNavClick={this.handleViewChange}/>
-        <main className="JmApp-main">
-          <JmContent children={this.state.currentContent()}/>
-        </main>
+        <JmMain children={this.state.currentContent()}/>
         <footer className="JmApp-footer">
           <CopyrightIcon className="JmApp-footer__icon" style={{ fontSize: '1em' }}/>
           <span>2020 jakmat</span>
