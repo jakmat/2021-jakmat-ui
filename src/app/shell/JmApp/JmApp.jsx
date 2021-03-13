@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './JmApp.scss';
-import JmNav from "../JmNav/JmNav.jsx";
+import JmHeader from "../JmHeader/JmHeader";
+import JmNav from "../JmNav/JmNav";
 import JmMain from "../JmMain/JmMain";
+import JmFooter from "../JmFooter/JmFooter";
 import JmAbout from "../../views/about/JmAbout";
 import JmStack from "../../views/stack/JmStack";
 import JmProjects from "../../views/projects/JmProjects";
-import CopyrightIcon from '@material-ui/icons/Copyright';
 
 class JmApp extends Component {
   constructor(props) {
@@ -28,19 +29,10 @@ class JmApp extends Component {
   render() {
     return (
       <div className="JmApp">
-        <header className="JmApp-header">
-          <img src={this.state.logoSrc} className="JmApp-logo" alt="logo" />
-          <div className="JmApp-headline">
-            <h1 className="JmApp-title">Jakub Matusiak</h1>
-            <h2 className="JmApp-subtitle">Geospatial Web Developer</h2>
-          </div>
-        </header>
+        <JmHeader/>
         <JmNav onNavClick={this.handleViewChange}/>
         <JmMain children={this.state.currentContent()}/>
-        <footer className="JmApp-footer">
-          <CopyrightIcon className="JmApp-footer__icon" style={{ fontSize: '1em' }}/>
-          <span>2020 jakmat</span>
-        </footer>
+        <JmFooter/>
       </div>
     );
   }
