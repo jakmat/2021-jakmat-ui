@@ -35,9 +35,7 @@ class JmApp extends Component {
             <h2 className="JmApp-subtitle">Geospatial Web Developer</h2>
           </div>
         </header>
-        <nav className="JmApp-nav">
-          <JmNav onNavClick={this.handleViewChange}/>
-        </nav>
+        <JmNav onNavClick={this.handleViewChange}/>
         <main className="JmApp-main">
           <JmContent children={this.state.currentContent()}/>
         </main>

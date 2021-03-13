@@ -7,6 +7,7 @@
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-items: stretch;
   overflow-y: auto;
 
@@ -40,10 +41,6 @@
         margin: 0;
       }
     }
-  }
-
-  .JmApp-nav {
-    color: $appFontColor;
   }
 
   .JmApp-main {
