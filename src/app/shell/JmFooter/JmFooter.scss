@@ -1,15 +1,17 @@
 @import '../../../styles/common';
 
   .JmFooter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 100vw;
     min-height: $footerHeight;
     background-color: $appBackgroundColor;
     color: $appFontColor;
-    text-align: right;
     font-size: 0.8em;
     padding: $appPadding;
 
-    .JmFooter-copyright {
-      margin: 0 3px -2px;
+    .JmFooter-credit {
+      margin-left: 3px;
     }
   }

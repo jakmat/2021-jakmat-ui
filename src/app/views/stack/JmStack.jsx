@@ -78,7 +78,7 @@ function JmStack() {
         src: `${process.env.PUBLIC_URL}/assets/stack/npm.png`,
         width: '160px'
       },
-      details: 'Package archipelago'
+      details: 'Node Package Manager'
     },
     {
       id: 8,
@@ -89,7 +89,7 @@ function JmStack() {
         src: `${process.env.PUBLIC_URL}/assets/stack/webpack.png`,
         width: '120px'
       },
-      details: 'Bundling, ENVing, http proxying'
+      details: 'Module bundler'
     },
     {
       id: 9,
@@ -101,6 +101,17 @@ function JmStack() {
         width: '160px'
       },
       details: 'Automated code quality assurance'
+    },
+    {
+      id: 9,
+      startYear: 2017,
+      endYear: null,
+      name: 'Emmet',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/stack/emmet.png`,
+        width: '120px'
+      },
+      details: 'HTML markup assistance'
     },
     {
       id: 10,
@@ -133,7 +144,7 @@ function JmStack() {
         src: `${process.env.PUBLIC_URL}/assets/stack/lodash.png`,
         width: '140px'
       },
-      details: 'If only needed'
+      details: 'JavaScript utils library'
     },
     {
       id: 13,
@@ -256,10 +267,10 @@ function JmStack() {
     }
   ];
   return (
-    <article className="JmStack">
+    <section className="JmStack">
       <h3>Technologies and Tools</h3>
       <JmList items={stack}/>
-    </article>
+    </section>
   );
 }
 

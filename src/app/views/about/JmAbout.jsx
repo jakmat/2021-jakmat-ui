@@ -1,16 +1,80 @@
 import React from 'react';
+import './JmAbout.scss';
+import JmIcon from "../../../components/JmIcon/JmIcon";
 
 function JmAbout() {
+  const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak.jpeg`;
+  const picAlt = 'Jakub Matusiak';
+  const icon = {
+    professionalInterests: 'work',
+    languages: 'language',
+    characteristics: 'build',
+    privateInterests: 'home',
+    links: 'link'
+  };
+  const iconSize = '18px';
   return (
-    <article className="JmAbout">
+    <section className="JmAbout">
       <h3>About and Beyound</h3>
-      <p>I am strongly focused on Frontend Development and Visualizing Geospatial Data. In two words, my professional aims are JavaScript and Maps.</p>
-      <p>Unstoppably improving skills in modern Frontend Development with focus on HTML, CSS and JavaScript, especially powerful Vue.js + Vuex with previous Angular experience. Working with both Windows and Linux, using Visual Studio Code, npm, Webpack, ESLint. Experienced in Scrum methodology with Agile approach and workflow driven by Jira, Git and Jenkins.</p>
-      <p>GIS cartographer from 2011, self-teaching programmer since 2015, freelancing throughout 2016, I finished postgraduate IT university studies to verify my theoretical and practical knowledge. Since 2017 working in team projects for international customers: before in a Polish software house and currently in an international Poland-Sweden Leica Machine Control team. My everyday tasks deal with HTML, CSS and JavaScript, developing construction site geospatial software, using a 3D map library.</p>
-      <p>Wide practical experience in spoken English (C1), derived from 4 years of its everyday usage. Additionally, basic experience in Dutch (A2).</p>
-      <p>Analytical thinker with iron patience, precision and creativity, spatial sense and cartographic skills, openess to learning new solutions and developing professional knowledge. Highly motivated and fast learner.</p>
-      <p><a href="https://www.linkedin.com/in/jakub-matusiak/" target="_blank" rel="noopener noreferrer">Visit my LinkedIn profile</a></p>
-    </article>
+      <article>
+        <div className="JmAbout-text JmAbout-professional">
+          <header>
+            <JmIcon icon={icon.professionalInterests} fontSize={iconSize}/>
+            <h4>Professional interests:</h4>
+          </header>
+          <ul>
+            <li>Modern web development</li>
+            <li>Visualizing geospatial data</li>
+            <li>GIS and cartography</li>
+          </ul>
+        </div>
+        <div className="JmAbout-text JmAbout-language">
+          <header>
+            <JmIcon icon={icon.languages} fontSize={iconSize}/>
+            <h4>Languages:</h4>
+          </header>
+          <ul>
+            <li>Polish (native)</li>
+            <li>English (fluent)</li>
+            <li>Dutch (basic)</li>
+          </ul>
+        </div>
+        <div className="JmAbout-text JmAbout-characteristics">
+          <header>
+            <JmIcon icon={icon.characteristics} fontSize={iconSize}/>
+            <h4>Characteristics:</h4>
+          </header>
+          <ul>
+            <li>Patience and motivation</li>
+            <li>Creativity and precision</li>
+            <li>Spatial and cartographic sense</li>
+          </ul>
+        </div>
+        <div className="JmAbout-text JmAbout-private">
+          <header>
+            <JmIcon icon={icon.privateInterests} fontSize={iconSize}/>
+            <h4>Private interests:</h4>
+          </header>
+          <ul>
+            <li>Urbanism</li>
+            <li>Tourism</li>
+            <li>Astronomy</li>
+          </ul>
+        </div>
+        <div className="JmAbout-text JmAbout-links">
+          <header>
+            <JmIcon icon={icon.links} fontSize={iconSize}/>
+            <h4>Links:</h4>
+          </header>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/jakub-matusiak" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/jakmat" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li><a href="https://www.duolingo.com/profile/jakmat87" target="_blank" rel="noopener noreferrer">Duolingo</a></li>
+          </ul>
+        </div>
+        <img className="JmAbout-picture" src={picSrc} alt={picAlt}/>
+      </article>
+    </section>
   );
 }
 

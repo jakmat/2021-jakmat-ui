@@ -1,12 +1,14 @@
 import React from 'react';
 import './JmFooter.scss';
-import CopyrightIcon from '@material-ui/icons/Copyright';
+import JmIcon from "../../../components/JmIcon/JmIcon";
 
 function JmFooter() {
+  const iconLigature = 'copyright';
+  const iconSize = '1em';
   const credit = '2020 jakmat';
   return (
     <footer className="JmFooter">
-      <CopyrightIcon className="JmFooter-copyright" style={{ fontSize: '1em' }}/>
+      <JmIcon icon={iconLigature} fontSize={iconSize}/>
       <span className="JmFooter-credit">{credit}</span>
     </footer>
   );

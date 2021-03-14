@@ -12,7 +12,7 @@ function JmProjects() {
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`
       },
-      details: 'React-powered personal website and development lab',
+      details: 'Personal website and development lab. React.',
       url: {
         text: 'You are Here :)',
         href: ''
@@ -27,7 +27,7 @@ function JmProjects() {
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/leica-geosystems.jpg`
       },
-      details: '3D map-centered app for managing construction site workflows',
+      details: '3D map app for managing construction site workflows. Vue, Cesium, D3.',
       url: {
         text: 'Watch App Demo',
         href: 'https://www.youtube.com/watch?v=jKMocAxeqfQ'
@@ -42,7 +42,7 @@ function JmProjects() {
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`
       },
-      details: 'Vue-powered personal personal website and development lab',
+      details: 'Pesonal personal website and development lab. Vue.',
       url: {
         text: 'Go to Website',
         href: 'https://www.jakubmatusiak.com'
@@ -57,7 +57,7 @@ function JmProjects() {
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/polcode.jpg`
       },
-      details: 'Multiple frontend assignments',
+      details: 'Multiple frontend assignments. Angular, PHP.',
       url: {
         text: 'Software House',
         href: ''
@@ -68,35 +68,18 @@ function JmProjects() {
       type: 'Freelance',
       startYear: 2017,
       endYear: 2017,
-      name: 'Wytwórnia Opakowań Foliowych',
+      name: 'Magda Skibka PR Consulting',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/opakowania-wof.png`,
-        width: '200px',
-        height: '200px'
+        src: `${process.env.PUBLIC_URL}/assets/projects/plndesign.png`
       },
-      details: 'Landing page for foil package factory',
+      details: 'Landing page for PR specialist. HTML, PHP.',
       url: {
-        text: 'Go to Website',
-        href: 'http://www.opakowania-wof.pl'
+        href: 'http://jakmat.ayz.pl/magda/',
+        text: 'Go to archived page'
       }
     },
     {
       id: 6,
-      type: 'Freelance',
-      startYear: 2016,
-      endYear: 2016,
-      name: 'Retkiński Kebab',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/retkinski-kebab.png`
-      },
-      details: 'Landing page for Pakistani restaurant',
-      url: {
-        text: 'Go to Website',
-        href: 'http://www.jakmat.ayz.pl/kebab'
-      }
-    },
-    {
-      id: 7,
       type: 'E-commerce',
       startYear: 2014,
       endYear: 2017,
@@ -104,14 +87,14 @@ function JmProjects() {
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/moja-soja.png`
       },
-      details: 'Own-branded soybean milk maker home appliance store',
+      details: 'Own-branded soybean milk maker home appliance store. Prestashop CMS.',
       url: {
-        text: 'Go to Wayback Machine',
-        href: 'https://web.archive.org/web/2015*/mojasoja.pl'
+        href: 'http://jakmat.ayz.pl/mojasoja/',
+        text: 'Go to archived Allegro template'
       }
     },
     {
-      id: 8,
+      id: 7,
       type: 'Full time job',
       startYear: 2011,
       endYear: 2017,
@@ -120,18 +103,18 @@ function JmProjects() {
         src: `${process.env.PUBLIC_URL}/assets/projects/emapa.png`,
         width: '180px'
       },
-      details: 'GIS development of maps for driver and tourist navigations',
+      details: 'Development of maps for driver and tourist navigations. GIS, SQL.',
       url: {
-        text: 'Go to Map',
+        text: 'Go to contributed Map',
         href: 'http://www.emapi.pl/'
       }
     }
   ];
   return (
-    <article className="JmProjects">
+    <section className="JmProjects">
       <h3>Jobs and Projects</h3>
       <JmList items={projects}/>
-    </article>
+    </section>
   );
 }
 
