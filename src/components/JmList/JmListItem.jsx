@@ -1,8 +1,9 @@
 import React from 'react';
 import './JmListItem.scss';
+import JmLink from "../../components/JmLink/JmLink";
 
 const getLink = (url) => {
-  if (url.href) return (<a className="JmListItem-link" href={url.href} target="_blank" rel="noopener noreferrer">{url.text}</a>);
+  if (url.href) return (<JmLink href={url.href} text={url.text}/>);
   else return (<span className="JmListItem-link">{url.text}</span>);
 };
 
@@ -21,8 +22,8 @@ function JmListItem(props) {
           <h4 className="JmListItem-name">{title}</h4>
           <span className="JmListItem-time">{subtitle}</span>
         </div>
-        {url}
         <p className="JmListItem-description">{details}</p>
+        {url}
       </div>
     </li>
   );

@@ -6,7 +6,7 @@ function JmList(props) {
   const items = props.items.map((i) => {
     const { avatar, name, startYear, endYear, details, url, type } = i;
     const isUrl = url && url.href;
-    const urlData = isUrl ? { ...url, text: `[ ${url.text} ]` } : { ...url };
+    const urlData = isUrl ? { ...url, text: url.text } : { ...url };
     const endTime = endYear ? endYear : 'now';
     const timeSpan = `${startYear} - ${endTime}`;
     const title = name;

@@ -20,7 +20,6 @@ const materialIcons = {
 function JmIcon(props) {
   const { icon, fontSize } = props;
   const materialIcon = React.cloneElement(materialIcons[icon], { style: { fontSize } });
-  console.log(materialIcon)
   return (
     <i className="JmIcon">{materialIcon}</i>
   );

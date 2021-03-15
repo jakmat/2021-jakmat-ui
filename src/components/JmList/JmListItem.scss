@@ -52,17 +52,16 @@
       }
     }
 
-    .JmListItem-link {
-      width: 200px;
-      text-align: left;
-      color: $appFontColor;
-      font-size: 14px;
-    }
-
     .JmListItem-description {
       width: 200px;
       display: block;
-      margin: 10px 0 0;
+      margin: 10px 0;
+    }
+
+    .JmListItem-link, .JmLink {
+      width: 200px;
+      text-align: left;
+      font-size: 14px;
     }
   }
 }

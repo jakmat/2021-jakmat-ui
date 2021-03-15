@@ -1,6 +1,7 @@
 import React from 'react';
 import './JmAbout.scss';
 import JmIcon from "../../../components/JmIcon/JmIcon";
+import JmLink from "../../../components/JmLink/JmLink";
 
 function JmAbout() {
   const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak.jpeg`;
@@ -67,9 +68,9 @@ function JmAbout() {
             <h4>Links:</h4>
           </header>
           <ul>
-            <li><a href="https://www.linkedin.com/in/jakub-matusiak" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://github.com/jakmat" target="_blank" rel="noopener noreferrer">Github</a></li>
-            <li><a href="https://www.duolingo.com/profile/jakmat87" target="_blank" rel="noopener noreferrer">Duolingo</a></li>
+            <li><JmLink href="https://www.linkedin.com/in/jakub-matusiak" text="LinkedIn"/></li>
+            <li><JmLink href="https://github.com/jakmat" text="Github"/></li>
+            <li><JmLink href="https://www.duolingo.com/profile/jakmat87" text="Duolingo"/></li>
           </ul>
         </div>
         <img className="JmAbout-picture" src={picSrc} alt={picAlt}/>

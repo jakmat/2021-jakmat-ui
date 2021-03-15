@@ -103,7 +103,7 @@ function JmStack() {
       details: 'Automated code quality assurance'
     },
     {
-      id: 9,
+      id: 10,
       startYear: 2017,
       endYear: null,
       name: 'Emmet',
@@ -114,7 +114,7 @@ function JmStack() {
       details: 'HTML markup assistance'
     },
     {
-      id: 10,
+      id: 11,
       startYear: 2018,
       endYear: null,
       name: 'Cesium.js',
@@ -125,7 +125,7 @@ function JmStack() {
       details: '3D map library'
     },
     {
-      id: 11,
+      id: 12,
       startYear: 2020,
       endYear: null,
       name: 'Leaflet.js',
@@ -136,7 +136,7 @@ function JmStack() {
       details: '2D map library'
     },
     {
-      id: 12,
+      id: 13,
       startYear: 2018,
       endYear: null,
       name: 'Lodash',
@@ -147,7 +147,7 @@ function JmStack() {
       details: 'JavaScript utils library'
     },
     {
-      id: 13,
+      id: 14,
       startYear: 2019,
       endYear: null,
       name: 'D3.js',
@@ -158,7 +158,7 @@ function JmStack() {
       details: 'SVG chart library'
     },
     {
-      id: 14,
+      id: 15,
       startYear: 2018,
       endYear: 2020,
       name: 'Moment.js',
@@ -169,7 +169,7 @@ function JmStack() {
       details: 'Date/time library'
     },
     {
-      id: 15,
+      id: 16,
       startYear: 2017,
       endYear: null,
       name: 'Git',
@@ -180,7 +180,7 @@ function JmStack() {
       details: 'Version control'
     },
     {
-      id: 16,
+      id: 17,
       startYear: 2017,
       endYear: null,
       name: 'Ubuntu',
@@ -191,7 +191,7 @@ function JmStack() {
       details: 'Operation System'
     },
     {
-      id: 17,
+      id: 18,
       startYear: 2020,
       endYear: null,
       name: 'PyCharm',
@@ -202,7 +202,7 @@ function JmStack() {
       details: 'Integrated Development Environment'
     },
     {
-      id: 18,
+      id: 19,
       startYear: 2020,
       endYear: null,
       name: 'Jira',
@@ -212,7 +212,7 @@ function JmStack() {
       details: 'Task Management Tool'
     },
     {
-      id: 19,
+      id: 20,
       startYear: 2018,
       endYear: null,
       name: 'Jenkins',
@@ -223,7 +223,7 @@ function JmStack() {
       details: 'Continuous Integration'
     },
     {
-      id: 20,
+      id: 21,
       startYear: 2019,
       endYear: null,
       name: 'Postman',
@@ -234,7 +234,7 @@ function JmStack() {
       details: 'Inspecting query parameters and payloads'
     },
     {
-      id: 21,
+      id: 22,
       startYear: 2020,
       endYear: null,
       name: 'Python',
@@ -245,7 +245,7 @@ function JmStack() {
       details: 'Flask APIs, Skyfield'
     },
     {
-      id: 22,
+      id: 23,
       startYear: 2011,
       endYear: 2017,
       name: 'SQL',
@@ -256,7 +256,7 @@ function JmStack() {
       details: 'Oracle SQL Modeller, Oracle SQL Developer'
     },
     {
-      id: 23,
+      id: 24,
       startYear: 2009,
       endYear: null,
       name: 'GIS',
