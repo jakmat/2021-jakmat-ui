@@ -45,7 +45,7 @@ function JmProjects() {
       details: 'Pesonal personal website and development lab. Vue.',
       url: {
         text: 'Go to Website',
-        href: 'https://www.jakubmatusiak.com/jakmat-v1'
+        href: 'http://www.jakubmatusiak.com/jakmat-v1'
       }
     },
     {
@@ -74,7 +74,7 @@ function JmProjects() {
       },
       details: 'Landing page for PR specialist. HTML, PHP.',
       url: {
-        href: 'https://www.jakubmatusiak.com/ms/',
+        href: 'http://www.jakubmatusiak.com/ms/',
         text: 'Go to archived page'
       }
     },
@@ -89,7 +89,7 @@ function JmProjects() {
       },
       details: 'Own-branded soybean milk maker home appliance store. Prestashop CMS.',
       url: {
-        href: 'https://www.jakubmatusiak.com/mojasoja/',
+        href: 'http://www.jakubmatusiak.com/mojasoja/',
         text: 'Go to archived Allegro template'
       }
     },
