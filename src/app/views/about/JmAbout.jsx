@@ -26,7 +26,7 @@ function JmAbout() {
           <ul>
             <li>Modern web development</li>
             <li>Visualizing geospatial data</li>
-            <li>GIS and cartography</li>
+            <li>Maps, cartography, GIS</li>
           </ul>
         </div>
         <div className="JmAbout-text JmAbout-language">
