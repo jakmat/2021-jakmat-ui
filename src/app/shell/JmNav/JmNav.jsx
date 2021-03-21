@@ -9,25 +9,24 @@ class JmNav extends Component {
       activeButtonId: 'about'
     };
     this.onNavClick = props.onNavClick;
-    this.handleButtonClick = this.handleButtonClick.bind(this);
   }
-  handleButtonClick = (id) => {
-    this.setState((state) => ({ activeButtonId: id }))
+  handleButtonClick = async (id) => {
+    await this.setState((state) => ({ activeButtonId: id }))
     this.onNavClick(id);
   }
   render() {
     return (
       <nav className="JmNav">
         <JmButton
-          className={this.state.activeButtonId === 'about' ? 'JmButton--active' : ''}
+          isActive={this.state.activeButtonId === 'about'}
           text="About"
           onClick={this.handleButtonClick.bind(this, 'about')}/>
         <JmButton
-          className={this.state.activeButtonId === 'stack' ? 'JmButton--active' : ''}
+          isActive={this.state.activeButtonId === 'stack'}
           text="Stack"
           onClick={this.handleButtonClick.bind(this, 'stack')}/>
         <JmButton
-          className={this.state.activeButtonId === 'projects' ? 'JmButton--active' : ''}
+          isActive={this.state.activeButtonId === 'projects'}
           text="Projects"
           onClick={this.handleButtonClick.bind(this, 'projects')}/>
       </nav>

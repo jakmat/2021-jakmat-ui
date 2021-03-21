@@ -8,8 +8,10 @@
   border-radius: $appBorderRadius;
   cursor: pointer;
 
-  &:hover {
-    background-color: $contentBackgroundColorHover;
+  &:not(&--active) {
+    &:hover {
+      background-color: $contentBackgroundColorHover;
+    }
   }
 
   &--active {
