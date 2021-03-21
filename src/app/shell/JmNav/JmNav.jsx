@@ -2,14 +2,21 @@ import React, { Component } from 'react';
 import './JmNav.scss';
 import JmButton from '../../../components/JmButton/JmButton';
 
+const nav = [
+  { id: 'stack', text: 'Tech Stack' },
+  { id: 'projects', text: 'Projects' },
+  { id: 'about', text: 'About Me' }
+];
+
 class JmNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeButtonId: 'about'
+      activeButtonId: 'stack'
     };
     this.onNavClick = props.onNavClick;
   }
+  getNav = () => nav.map(i => <JmButton key={i.id} isActive={this.state.activeButtonId === i.id} text={i.text} onClick={this.handleButtonClick.bind(this, i.id)}/>);
   handleButtonClick = async (id) => {
     await this.setState((state) => ({ activeButtonId: id }))
     this.onNavClick(id);
@@ -17,18 +24,7 @@ class JmNav extends Component {
   render() {
     return (
       <nav className="JmNav">
-        <JmButton
-          isActive={this.state.activeButtonId === 'about'}
-          text="About"
-          onClick={this.handleButtonClick.bind(this, 'about')}/>
-        <JmButton
-          isActive={this.state.activeButtonId === 'stack'}
-          text="Stack"
-          onClick={this.handleButtonClick.bind(this, 'stack')}/>
-        <JmButton
-          isActive={this.state.activeButtonId === 'projects'}
-          text="Projects"
-          onClick={this.handleButtonClick.bind(this, 'projects')}/>
+        {this.getNav()}
       </nav>
     );
   }

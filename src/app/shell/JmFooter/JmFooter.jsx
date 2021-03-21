@@ -5,7 +5,7 @@ import JmIcon from "../../../components/JmIcon/JmIcon";
 function JmFooter() {
   const iconLigature = 'copyright';
   const iconSize = '1em';
-  const credit = '2020 jakmat';
+  const credit = '2021 jakmat';
   return (
     <footer className="JmFooter">
       <JmIcon icon={iconLigature} fontSize={iconSize}/>
