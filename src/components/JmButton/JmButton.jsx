@@ -2,10 +2,10 @@ import React from 'react';
 import './JmButton.scss';
 
 function JmButton(props) {
-  const onClick = () => props.onClick(props.id);
+  const { text, onClick } = props;
   return (
     <div className="JmButton" onClick={onClick}>
-      <span>{props.text}</span>
+      <span>{text}</span>
     </div>
   );
 }

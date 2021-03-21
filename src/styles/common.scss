@@ -1,6 +1,8 @@
 // Colors
 $appBackgroundColor: rgba(37, 37, 37, 1);
 $contentBackgroundColor: lighten($appBackgroundColor, 5%);
+$contentBackgroundColorHover: lighten($appBackgroundColor, 10%);
+$contentBackgroundColorActive: lighten($appBackgroundColor, 15%);
 $appFontColor: rgba(240, 240, 240, 1);
 $appLinkColor: rgba(138, 237, 141, 1);
 

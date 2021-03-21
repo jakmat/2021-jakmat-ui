@@ -9,5 +9,27 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
-  overflow-y: auto;
+  overflow-y: scroll;
+
+  //&::scrollbar-track,
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: $appBorderRadius;
+    background-color: $appBackgroundColor;
+  }
+
+  //&::scrollbar,
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: $appBackgroundColor;
+  }
+
+  //&::scrollbar-thumb,
+  &::-webkit-scrollbar-thumb {
+    border-radius: $appBorderRadius;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: $contentBackgroundColor;
+  }
 }

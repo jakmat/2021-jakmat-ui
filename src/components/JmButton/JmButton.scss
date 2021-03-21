@@ -7,4 +7,12 @@
   padding: $appPadding;
   border-radius: $appBorderRadius;
   cursor: pointer;
+
+  &:hover {
+    background-color: $contentBackgroundColorHover;
+  }
+
+  &--active {
+    background-color: $contentBackgroundColorActive;
+  }
 }

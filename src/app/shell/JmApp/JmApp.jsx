@@ -18,19 +18,21 @@ class JmApp extends Component {
         projects: JmProjects
       },
       logoSrc: `${process.env.PUBLIC_URL}/assets/jakmat-webdev.png`,
-      currentContent: JmAbout
+      currentContent: JmAbout,
+      activeButtonId: 'about'
     }
     this.handleViewChange = this.handleViewChange.bind(this);
   }
   handleViewChange(content) {
+    const activeButtonId = content;
     const currentContent = this.state.contents[content];
-    this.setState(state => ({ currentContent }));
+    this.setState(state => ({ activeButtonId, currentContent }));
   }
   render() {
     return (
       <div className="JmApp">
         <JmHeader/>
-        <JmNav onNavClick={this.handleViewChange}/>
+        <JmNav activeButtonId={this.activeButtonId} onNavClick={this.handleViewChange}/>
         <JmMain children={this.state.currentContent()}/>
         <JmFooter/>
       </div>
