@@ -2,7 +2,7 @@
 
 .JmHeader {
   width: 320px;
-  height: $headerHeight;
+  min-height: $headerHeight;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
