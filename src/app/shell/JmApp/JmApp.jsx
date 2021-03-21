@@ -18,8 +18,8 @@ class JmApp extends Component {
         projects: JmProjects
       },
       logoSrc: `${process.env.PUBLIC_URL}/assets/jakmat-webdev.png`,
-      currentContent: JmAbout,
-      activeButtonId: 'about'
+      currentContent: JmStack,
+      activeButtonId: 'stack'
     }
     this.handleViewChange = this.handleViewChange.bind(this);
   }
