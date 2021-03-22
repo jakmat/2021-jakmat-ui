@@ -35,9 +35,9 @@ function JmAbout() {
             <h4>Languages:</h4>
           </header>
           <ul>
-            <li>Polish (native)</li>
             <li>English (fluent)</li>
             <li>Dutch (basic)</li>
+            <li>Polish (native)</li>
           </ul>
         </div>
         <div className="JmAbout-text JmAbout-characteristics">
@@ -58,8 +58,8 @@ function JmAbout() {
           </header>
           <ul>
             <li>Urbanism</li>
-            <li>Tourism</li>
             <li>Astronomy</li>
+            <li>Tourism</li>
           </ul>
         </div>
         <div className="JmAbout-text JmAbout-links">
