@@ -1,16 +1,17 @@
 @import '../../../styles/common';
 
 .JmAbout {
-  margin: auto;
   max-width: 1550px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 
   article {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: flex-start;
 
     .JmAbout-text {
       max-width: 180px;
