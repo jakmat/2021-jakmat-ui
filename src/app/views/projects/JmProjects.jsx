@@ -6,16 +6,16 @@ function JmProjects() {
     {
       id: 1,
       type: 'Project',
-      startYear: 2020,
+      startYear: 2021,
       endYear: null,
-      name: 'Personal Website 2.0',
+      name: 'Personal Website v2.0',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`
+        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo-jakub-matusiak-geospatial-web-developer.png`
       },
-      details: 'Personal website and development lab. React.',
+      details: 'Current personal website and development lab. React.',
       url: {
-        text: 'Current Website',
-        href: 'https://www.jakubmatusiak.com'
+        text: 'Go to Repository',
+        href: 'https://github.com/jakmat/2021-jakmat-ui'
       }
     },
     {
@@ -25,7 +25,7 @@ function JmProjects() {
       endYear: null,
       name: 'Leica ConX 3D',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/leica-geosystems.jpg`
+        src: `${process.env.PUBLIC_URL}/assets/projects/leica-geosystems-jakub-matusiak-geospatial-web-developer.jpg`
       },
       details: '3D map app for managing construction site workflows. Vue, Cesium, D3.',
       url: {
@@ -38,14 +38,14 @@ function JmProjects() {
       type: 'Project',
       startYear: 2018,
       endYear: 2020,
-      name: 'Personal Website 1.0',
+      name: 'Personal Website v1.0',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo.png`
+        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo-jakub-matusiak-geospatial-web-developer.png`
       },
-      details: 'Pesonal personal website and development lab. Vue.',
+      details: 'Archived personal personal website and development lab. Vue.',
       url: {
-        text: 'Go to Website',
-        href: 'http://www.jakubmatusiak.com/jakmat-v1'
+        text: 'Go to Repository',
+        href: 'https://github.com/jakmat/2018-personal-website'
       }
     },
     {
@@ -55,27 +55,25 @@ function JmProjects() {
       endYear: 2018,
       name: 'Polcode',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/polcode.jpg`
+        src: `${process.env.PUBLIC_URL}/assets/projects/polcode-jakub-matusiak-geospatial-web-developer.jpg`
       },
       details: 'Multiple frontend assignments. Angular, PHP.',
       url: {
         text: 'Software House',
-        href: ''
       }
     },
     {
       id: 5,
       type: 'Freelance',
-      startYear: 2017,
-      endYear: 2017,
-      name: 'Magda Skibka PR Consulting',
+      startYear: 2016,
+      endYear: 2018,
+      name: 'PLN Design Group',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/plndesign.png`
+        src: `${process.env.PUBLIC_URL}/assets/projects/pln-design-group-jakub-matusiak-geospatial-web-developer.png`
       },
-      details: 'Landing page for PR specialist. HTML, PHP.',
+      details: 'Website maintenance works, coding mailing campaigns. HTML, CSS, Wordpress.',
       url: {
-        href: 'http://www.jakubmatusiak.com/ms/',
-        text: 'Go to archived page'
+        text: 'PR Agency'
       }
     },
     {
@@ -85,9 +83,9 @@ function JmProjects() {
       endYear: 2017,
       name: 'MOJA SOJA',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/moja-soja.png`
+        src: `${process.env.PUBLIC_URL}/assets/projects/mojasoja-jakub-matusiak-geospatial-web-developer.png`
       },
-      details: 'Own-branded soybean milk maker home appliance store. Prestashop CMS.',
+      details: 'Own-branded soybean milk maker home appliance store. HTML, CSS, Prestashop.',
       url: {
         href: 'http://www.jakubmatusiak.com/mojasoja/',
         text: 'Go to archived Allegro template'
@@ -100,7 +98,7 @@ function JmProjects() {
       endYear: 2017,
       name: 'Emapa',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/emapa.png`,
+        src: `${process.env.PUBLIC_URL}/assets/projects/emapa-jakub-matusiak-geospatial-web-developer.png`,
         width: '180px'
       },
       details: 'Development of maps for driver and tourist navigations. GIS, SQL.',
@@ -108,11 +106,25 @@ function JmProjects() {
         text: 'Go to contributed Map',
         href: 'http://www.emapi.pl/'
       }
+    },
+    {
+      id: 8,
+      type: 'Internship',
+      startYear: 2009,
+      endYear: 2009,
+      name: 'City of Lodz Office',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/projects/lodz-jakub-matusiak-geospatial-web-developer.png`,
+      },
+      details: 'Urban land use and cadaster database',
+      url: {
+        text: '',
+      }
     }
   ];
   return (
     <section className="JmProjects">
-      <h3>Jobs and Projects</h3>
+      <h3>Jobs and projects of my career are concerned with Web Development, Mapping and GIS.</h3>
       <JmList items={projects}/>
     </section>
   );
