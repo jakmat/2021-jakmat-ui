@@ -9,7 +9,7 @@ function JmStack() {
       endYear: null,
       name: 'HTML',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/html.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/html-jakub-matusiak-geospatial-web-developer.png`,
         height: '160px'
       },
       details: 'HTML5 semantics, SVG'
@@ -20,7 +20,7 @@ function JmStack() {
       endYear: null,
       name: 'CSS',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/css.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/css-jakub-matusiak-geospatial-web-developer.png`,
         height: '160px'
       },
       details: 'CSS3 animations, Sass, Less, BEM methodology, Bootstrap'
@@ -31,7 +31,7 @@ function JmStack() {
       endYear: null,
       name: 'JavaScript',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/java-script.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/javascript-jakub-matusiak-geospatial-web-developer.png`,
         height: '160px'
       },
       details: 'ESNext, Vue.js, React, Angular, AngularJS, Node.js'
@@ -42,7 +42,7 @@ function JmStack() {
       endYear: null,
       name: 'Vue.js',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/vue.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/vue-jakub-matusiak-geospatial-web-developer.png`,
         height: '100px'
       },
       details: 'Vuex, Vuetify'
@@ -53,7 +53,7 @@ function JmStack() {
       endYear: null,
       name: 'React',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/react.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/react-jakub-matusiak-geospatial-web-developer.png`,
         height: '140px'
       },
       details: 'Current page technology'
@@ -64,7 +64,7 @@ function JmStack() {
       endYear: 2018,
       name: 'Angular',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/angular.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/angular-jakub-matusiak-geospatial-web-developer.png`,
         height: '160px'
       },
       details: 'Angular 2, TypeScript'
@@ -75,7 +75,7 @@ function JmStack() {
       endYear: null,
       name: 'npm',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/npm.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/npm-jakub-matusiak-geospatial-web-developer.png`,
         width: '160px'
       },
       details: 'Node Package Manager'
@@ -86,7 +86,7 @@ function JmStack() {
       endYear: null,
       name: 'Webpack',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/webpack.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/webpack-jakub-matusiak-geospatial-web-developer.png`,
         width: '120px'
       },
       details: 'Module bundler'
@@ -97,7 +97,7 @@ function JmStack() {
       endYear: null,
       name: 'ESLint',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/eslint.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/eslint-jakub-matusiak-geospatial-web-developer.png`,
         width: '160px'
       },
       details: 'Automated code quality assurance'
@@ -108,7 +108,7 @@ function JmStack() {
       endYear: null,
       name: 'Emmet',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/emmet.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/emmet-jakub-matusiak-geospatial-web-developer.png`,
         width: '120px'
       },
       details: 'HTML markup assistance'
@@ -119,7 +119,7 @@ function JmStack() {
       endYear: null,
       name: 'Cesium.js',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/cesium.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/cesium-jakub-matusiak-geospatial-web-developer.png`,
         width: '120px'
       },
       details: '3D map library'
@@ -130,7 +130,7 @@ function JmStack() {
       endYear: null,
       name: 'Leaflet.js',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/leaflet.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/leaflet-jakub-matusiak-geospatial-web-developer.png`,
         width: '160px'
       },
       details: '2D map library'
@@ -141,7 +141,7 @@ function JmStack() {
       endYear: null,
       name: 'Lodash',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/lodash.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/lodash-jakub-matusiak-geospatial-web-developer.png`,
         width: '140px'
       },
       details: 'JavaScript utils library'
@@ -152,7 +152,7 @@ function JmStack() {
       endYear: null,
       name: 'D3.js',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/d3.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/d3-jakub-matusiak-geospatial-web-developer.png`,
         width: '140px'
       },
       details: 'SVG chart library'
@@ -163,7 +163,7 @@ function JmStack() {
       endYear: 2020,
       name: 'Moment.js',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/moment.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/moment-jakub-matusiak-geospatial-web-developer.png`,
         width: '120px'
       },
       details: 'Date/time library'
@@ -174,7 +174,7 @@ function JmStack() {
       endYear: null,
       name: 'Git',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/git.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/git-jakub-matusiak-geospatial-web-developer.png`,
         width: '140px'
       },
       details: 'Version control'
@@ -185,7 +185,7 @@ function JmStack() {
       endYear: null,
       name: 'Ubuntu',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/ubuntu.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/ubuntu-jakub-matusiak-geospatial-web-developer.png`,
         width: '140px'
       },
       details: 'Operation System'
@@ -196,7 +196,7 @@ function JmStack() {
       endYear: null,
       name: 'PyCharm',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/pycharm.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/pycharm-jakub-matusiak-geospatial-web-developer.png`,
         width: '120px'
       },
       details: 'Integrated Development Environment'
@@ -207,7 +207,7 @@ function JmStack() {
       endYear: null,
       name: 'Jira',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/jira.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/jira-jakub-matusiak-geospatial-web-developer.png`,
       },
       details: 'Task Management Tool'
     },
@@ -217,7 +217,7 @@ function JmStack() {
       endYear: null,
       name: 'Jenkins',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/jenkins.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/jenkins-jakub-matusiak-geospatial-web-developer.png`,
         height: '160px'
       },
       details: 'Continuous Integration'
@@ -228,7 +228,7 @@ function JmStack() {
       endYear: null,
       name: 'Postman',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/postman.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/postman-jakub-matusiak-geospatial-web-developer.png`,
         width: '180px'
       },
       details: 'Inspecting query parameters and payloads'
@@ -239,7 +239,7 @@ function JmStack() {
       endYear: null,
       name: 'Python',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/python.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/python-jakub-matusiak-geospatial-web-developer.png`,
         width: '140px'
       },
       details: 'Flask APIs, Skyfield'
@@ -250,7 +250,7 @@ function JmStack() {
       endYear: 2017,
       name: 'SQL',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/sql.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/sql-jakub-matusiak-geospatial-web-developer.png`,
         width: '100px'
       },
       details: 'Oracle SQL Modeller, Oracle SQL Developer'
@@ -261,14 +261,14 @@ function JmStack() {
       endYear: null,
       name: 'GIS',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/gis.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/gis-jakub-matusiak-geospatial-web-developer.png`,
       },
       details: 'ArcGIS, MapInfo, QGIS, digital cartography and spatial queries'
     }
   ];
   return (
     <section className="JmStack">
-      <h3>Technologies and Tools</h3>
+      <h3>My stack comprises technologies for Modern Frontend Development and Visualizing Geospatial Data on Maps.</h3>
       <JmList items={stack}/>
     </section>
   );

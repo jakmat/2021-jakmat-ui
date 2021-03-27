@@ -4,8 +4,8 @@ import JmIcon from "../../../components/JmIcon/JmIcon";
 import JmLink from "../../../components/JmLink/JmLink";
 
 function JmAbout() {
-  const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak.jpeg`;
-  const picAlt = 'Jakub Matusiak';
+  const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak-geospatial-web-developer.jpeg`;
+  const picAlt = 'Jakub Matusiak Geospatial Web Developer photo';
   const icon = {
     professionalInterests: 'work',
     languages: 'language',
@@ -16,7 +16,7 @@ function JmAbout() {
   const iconSize = '18px';
   return (
     <section className="JmAbout">
-      <h3>About and Beyound</h3>
+      <h3>I'm passionate about Programming, Cartography and Urban Planning problematics.</h3>
       <article>
         <div className="JmAbout-text JmAbout-professional">
           <header>
