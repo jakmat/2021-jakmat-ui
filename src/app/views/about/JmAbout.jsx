@@ -2,6 +2,7 @@ import React from 'react';
 import './JmAbout.scss';
 import JmIcon from "../../../components/JmIcon/JmIcon";
 import JmLink from "../../../components/JmLink/JmLink";
+import { observer } from "../../../modules/JmObserver";
 
 function JmAbout() {
   const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak.jpeg`;
@@ -14,6 +15,7 @@ function JmAbout() {
     links: 'link'
   };
   const iconSize = '18px';
+  observer.getObservation();
   return (
     <section className="JmAbout">
       <h3>About and Beyound</h3>
