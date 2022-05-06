@@ -20,6 +20,7 @@ class JmNav extends Component {
   handleButtonClick = async (id) => {
     await this.setState((state) => ({ activeButtonId: id }))
     this.onNavClick(id);
+    console.log(id)
   }
   render() {
     return (
