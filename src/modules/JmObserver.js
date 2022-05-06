@@ -19,7 +19,8 @@ export const observer = {
 
     },
      getObservation() {
-        fetch('http://localhost/test/')
+        fetch('http://172.18.0.2:5000/test')
+        // fetch('http://localhost/test/')
             .then(resolve => console.log(resolve))
             .catch(reject => console.log(reject));
         // this.fetchPlanets();
