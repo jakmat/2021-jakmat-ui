@@ -7,7 +7,7 @@ export const observer = {
             // const query = 'test';
             // const query = 'observation?objects=sun,mercury_barycenter,venus_barycenter,moon,mars_barycenter,jupiter_barycenter,saturn_barycenter,uranus_barycenter,neptune_barycenter,pluto_barycenter&time=1650773000&lat=52n&lon=19e';
             // const url = `${protocol}${server}/${query}`;
-            await fetch('http://172.17.0.2:5000/test/').then(resolve => console.log(resolve));
+            await fetch('http://172.17.0.3:5000/test/').then(resolve => console.log(resolve));
             // TODO: watch https://www.udemy.com/course/docker-kubernetes-the-practical-guide/learn/lecture/22166996#content
             // const json = await response.json();
             // const { data } = json;
@@ -19,7 +19,8 @@ export const observer = {
 
     },
      getObservation() {
-        fetch('http://172.18.0.2:5000/test')
+        fetch('http://172.23.0.2:5000/test')
+        // fetch('http://jakmat-api/test')
         // fetch('http://localhost/test/')
             .then(resolve => console.log(resolve))
             .catch(reject => console.log(reject));

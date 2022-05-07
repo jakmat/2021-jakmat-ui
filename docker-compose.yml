@@ -1,0 +1,30 @@
+version: "3"
+services:
+  jakmat-ui:
+    build: ./
+#    image: "jakmat-ui"
+    volumes:
+      - ./src:/app/src
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    depends_on:
+      - jakmat-api
+#    environment:
+#      - JAKMAT_UI_KEY=value
+#    env_file:
+#      - ./.env.local
+  jakmat-api:
+    build: ../2021-jakmat-api
+#    image: "jakmat-api"
+    volumes:
+      - ../2021-jakmat-api:/app
+    ports:
+      - '80:80'
+    stdin_open: true
+    tty: true
+#    environment:
+#      - JAKMAT_API_KEY=value
+#    env_file:
+#      - ./.env.local
