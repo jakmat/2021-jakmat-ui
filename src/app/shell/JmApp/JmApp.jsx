@@ -29,8 +29,6 @@ class JmApp extends Component {
     this.setState(state => ({ activeButtonId, currentContent }));
   }
   render() {
-    console.log(process.env.REACT_APP_ENV)
-    console.log(process.env.REACT_APP_TEST)
     return (
       <div className="JmApp">
         <JmHeader/>
