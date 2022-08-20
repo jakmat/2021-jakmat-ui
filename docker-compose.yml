@@ -16,7 +16,9 @@ services:
 #    env_file:
 #      - ./.env.local
   jakmat-api:
-    build: ../2021-jakmat-api
+    build:
+      context: ../2021-jakmat-api
+      dockerfile: dev.Dockerfile
 #    image: "jakmat-api"
     volumes:
       - ../2021-jakmat-api:/app

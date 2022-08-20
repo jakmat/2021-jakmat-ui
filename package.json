@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-lab": "react-scripts build --env=lab",
+    "build-staging": "react-scripts build --env=staging",
+    "build-production": "react-scripts build --env=production",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
