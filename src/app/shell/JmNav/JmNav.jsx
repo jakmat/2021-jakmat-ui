@@ -10,7 +10,7 @@ function JmNav(props) {
   ];
   const [activeButtonId, setActiveButtonId] = useState('stack');
   const getNav = () => {
-    nav.map((view) => {
+    return nav.map((view) => {
       return <JmButton
         key={view.id}
         isActive={activeButtonId === view.id}
