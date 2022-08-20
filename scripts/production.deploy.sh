@@ -5,7 +5,7 @@ then
     exit 1
 fi
 {
-  npm run build-production
+  npm run build:production
   scp -r -P 222 ../build/* jakmat@s149.cyber-folks.pl:/home/jakmat/domains/jakubmatusiak.com/public_html
   echo 'Production deployment finished successfully.'
 } || {

@@ -11,10 +11,10 @@
 
 # misc
 .DS_Store
-.env.local
-.env.lab.local
-.env.staging.local
-.env.production.local
+env/.env.local
+env/.env.lab.local
+env/.env.staging.local
+env/.env.production.local
 
 npm-debug.log*
 yarn-debug.log*

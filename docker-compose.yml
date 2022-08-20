@@ -14,7 +14,7 @@ services:
 #    environment:
 #      - JAKMAT_UI_KEY=value
 #    env_file:
-#      - ./.env.local
+#      - ./.env.lab.local
   jakmat-api:
     build:
       context: ../2021-jakmat-api
@@ -29,4 +29,4 @@ services:
 #    environment:
 #      - JAKMAT_API_KEY=value
 #    env_file:
-#      - ./.env.local
+#      - ./.env.lab.local

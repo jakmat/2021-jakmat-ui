@@ -4,10 +4,10 @@
   "homepage": "./",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build-lab": "react-scripts build --env=lab",
-    "build-staging": "react-scripts build --env=staging",
-    "build-production": "react-scripts build --env=production",
+    "start": "react-app-env --env-file=./env/.env.local start",
+    "build:lab": "react-app-env --env-file=./env/.env.lab build",
+    "build:staging": "react-app-env --env-file=./env/.env.staging build",
+    "build:production": "react-app-env --env-file=./env/.env.production build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -20,6 +20,7 @@
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
+    "react-app-env": "1.2.3",
     "sass": "1.54.4"
   },
   "browserslist": [
