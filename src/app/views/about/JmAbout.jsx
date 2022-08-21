@@ -2,7 +2,6 @@ import React from 'react';
 import './JmAbout.scss';
 import JmIcon from "../../../components/JmIcon/JmIcon";
 import JmLink from "../../../components/JmLink/JmLink";
-import { observer } from "../../../modules/JmObserver";
 
 function JmAbout() {
   const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak-geospatial-web-developer.jpeg`;
@@ -15,7 +14,6 @@ function JmAbout() {
     links: 'link'
   };
   const iconSize = '18px';
-  observer.getObservation();
   return (
     <section className="JmAbout">
       <h3>I'm passionate about Programming, Cartography and Urban Planning problematics.</h3>
