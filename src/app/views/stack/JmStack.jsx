@@ -43,6 +43,7 @@ function JmStack() {
       name: 'TypeScript',
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/stack/typescript-jakub-matusiak-geospatial-web-developer.png`,
+        height: '110px'
       },
       details: 'Strong typing in conjunction with Vue, React and Angular'
     },
@@ -86,8 +87,64 @@ function JmStack() {
       name: 'AngularJS',
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/stack/angularjs-jakub-matusiak-geospatial-web-developer.png`,
+        height: '160px'
       },
       details: 'Decomissioning legacy codebase'
+    },
+    {
+      id: '0f79b0a7-f05f-4efa-9685-c948d4391b36',
+      startYear: 2018,
+      endYear: null,
+      name: 'Cesium.js',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/stack/cesium-jakub-matusiak-geospatial-web-developer.png`,
+        width: '120px'
+      },
+      details: '3D map library'
+    },
+    {
+      id: 'd43a2295-daa4-4a70-90b0-6bd207639621',
+      startYear: 2020,
+      endYear: null,
+      name: 'Leaflet.js',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/stack/leaflet-jakub-matusiak-geospatial-web-developer.png`,
+        width: '160px'
+      },
+      details: '2D map library'
+    },
+    {
+      id: '82019624-7919-4442-92a3-e3d782eebaec',
+      startYear: 2019,
+      endYear: null,
+      name: 'D3.js',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/stack/d3-jakub-matusiak-geospatial-web-developer.png`,
+        width: '140px'
+      },
+      details: 'SVG chart library'
+    },
+    {
+      id: 'a51ed623-0f7c-4f37-bd83-0844006bdf93',
+      startYear: 2019,
+      endYear: null,
+      name: 'AG Grid',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/stack/aggrid-jakub-matusiak-geospatial-web-developer.webp`,
+        width: '160px'
+      },
+      details: 'Tabular, interactive information visualization'
+    },
+    {
+      id: '5525760f-f5fc-4a98-857b-67110f4481d9',
+      startYear: 2018,
+      endYear: null,
+      name: 'Lodash',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/stack/lodash-jakub-matusiak-geospatial-web-developer.png`,
+        width: '100px'
+      },
+      details: 'JavaScript utils library'
     },
     {
       id: 'fbd62892-765e-493a-b113-bee9f0d603b9',
@@ -134,58 +191,15 @@ function JmStack() {
       details: 'HTML markup assistance'
     },
     {
-      id: '0f79b0a7-f05f-4efa-9685-c948d4391b36',
-      startYear: 2018,
+      id: '92e9fa60-c917-4338-a917-27fdb3f44d3c',
+      startYear: 2017,
       endYear: null,
-      name: 'Cesium.js',
+      name: 'Git',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/cesium-jakub-matusiak-geospatial-web-developer.png`,
-        width: '120px'
-      },
-      details: '3D map library'
-    },
-    {
-      id: 'd43a2295-daa4-4a70-90b0-6bd207639621',
-      startYear: 2020,
-      endYear: null,
-      name: 'Leaflet.js',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/leaflet-jakub-matusiak-geospatial-web-developer.png`,
-        width: '160px'
-      },
-      details: '2D map library'
-    },
-    {
-      id: '5525760f-f5fc-4a98-857b-67110f4481d9',
-      startYear: 2018,
-      endYear: null,
-      name: 'Lodash',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/lodash-jakub-matusiak-geospatial-web-developer.png`,
+        src: `${process.env.PUBLIC_URL}/assets/stack/git-jakub-matusiak-geospatial-web-developer.png`,
         width: '140px'
       },
-      details: 'JavaScript utils library'
-    },
-    {
-      id: '82019624-7919-4442-92a3-e3d782eebaec',
-      startYear: 2019,
-      endYear: null,
-      name: 'D3.js',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/d3-jakub-matusiak-geospatial-web-developer.png`,
-        width: '140px'
-      },
-      details: 'SVG chart library'
-    },
-    {
-      id: 'a51ed623-0f7c-4f37-bd83-0844006bdf93',
-      startYear: 2019,
-      endYear: null,
-      name: 'AG Grid',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/aggrid-jakub-matusiak-geospatial-web-developer.webp`,
-      },
-      details: 'Tabular, interactive information visualization'
+      details: 'Version control'
     },
     {
       id: 'b4c94fe1-3a7a-46f6-9f02-19efc96b2430',
@@ -199,15 +213,26 @@ function JmStack() {
       details: 'Docker, Docker-compose'
     },
     {
-      id: '92e9fa60-c917-4338-a917-27fdb3f44d3c',
-      startYear: 2017,
+      id: '3dce4f1a-1c73-4f99-90ef-437ca841c4c9',
+      startYear: 2018,
       endYear: null,
-      name: 'Git',
+      name: 'Jenkins',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/git-jakub-matusiak-geospatial-web-developer.png`,
-        width: '140px'
+        src: `${process.env.PUBLIC_URL}/assets/stack/jenkins-jakub-matusiak-geospatial-web-developer.png`,
+        height: '160px'
       },
-      details: 'Version control'
+      details: 'Continuous Integration'
+    },
+    {
+      id: '9d68a76b-33ef-4012-9018-c01cec973a3b',
+      startYear: 2019,
+      endYear: null,
+      name: 'Postman',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/stack/postman-jakub-matusiak-geospatial-web-developer.png`,
+        width: '180px'
+      },
+      details: 'Inspecting query parameters and payloads'
     },
     {
       id: '4d7ef5a4-605d-426b-bbcd-79f7abb2be9e',
@@ -240,28 +265,6 @@ function JmStack() {
         src: `${process.env.PUBLIC_URL}/assets/stack/jira-jakub-matusiak-geospatial-web-developer.png`,
       },
       details: 'Task Management Tool'
-    },
-    {
-      id: '3dce4f1a-1c73-4f99-90ef-437ca841c4c9',
-      startYear: 2018,
-      endYear: null,
-      name: 'Jenkins',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/jenkins-jakub-matusiak-geospatial-web-developer.png`,
-        height: '160px'
-      },
-      details: 'Continuous Integration'
-    },
-    {
-      id: '9d68a76b-33ef-4012-9018-c01cec973a3b',
-      startYear: 2019,
-      endYear: null,
-      name: 'Postman',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/stack/postman-jakub-matusiak-geospatial-web-developer.png`,
-        width: '180px'
-      },
-      details: 'Inspecting query parameters and payloads'
     },
     {
       id: '58d6d3cd-49a9-4718-a2d1-79b46c19c42d',
