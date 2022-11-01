@@ -7,15 +7,17 @@ import JmFooter from "../JmFooter/JmFooter";
 import JmAbout from "../../views/about/JmAbout";
 import JmStack from "../../views/stack/JmStack";
 import JmProjects from "../../views/projects/JmProjects";
+import JmLab from "../../views/lab/JmLab";
 
 function JmApp() {
-  const [contents] = useState({
+  const contents = {
     about: JmAbout,
     stack: JmStack,
-    projects: JmProjects
-  });
-  const [currentContent, setCurrentContent] = useState(JmStack);
-  const [activeButtonId, setActiveButtonId] = useState('stack');
+    projects: JmProjects,
+    lab: JmLab
+  };
+  const [currentContent, setCurrentContent] = useState(JmAbout);
+  const [activeButtonId, setActiveButtonId] = useState('about');
   const handleViewChange = (content) => {
     setActiveButtonId(content);
     setCurrentContent(contents[content]);

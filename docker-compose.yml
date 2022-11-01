@@ -13,15 +13,15 @@ services:
       - jakmat-api
 #    environment:
 #      - JAKMAT_UI_KEY=value
-#    env_file:
-#      - ./.env.lab.local
+    env_file:
+      - ./env/.env.local
   jakmat-api:
     build:
-      context: ../2021-jakmat-api
-      dockerfile: dev.Dockerfile
+      context: ../2021-jakmat-api/fastapi
+      dockerfile: Dockerfile
 #    image: "jakmat-api"
     volumes:
-      - ../2021-jakmat-api:/app
+      - ../2021-jakmat-api/fastapi:/app
     ports:
       - '80:80'
     stdin_open: true
