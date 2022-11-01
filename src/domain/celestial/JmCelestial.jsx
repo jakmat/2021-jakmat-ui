@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './JmCelestial.scss';
 import celestialApi from "./celestial.api";
 import JmDateTimePicker from "../../components/JmDateTimePicker/JmDateTimePicker";
 import JmButton from "../../components/JmButton/JmButton";
@@ -7,13 +8,18 @@ function JmCelestial() {
   const [date, setDate] = useState(Date.now());
   const [objects, setObjects] = useState([{}]);
 
-  useEffect(() => {
-    async function getCelestialObjects() {
-      const celestialObjects = await celestialApi.getCelestialObjects(date);
-      setObjects(celestialObjects);
-    }
-    getCelestialObjects();
-  }, []);
+  const getCelestialObjects = async () => {
+    const celestialObjects = await celestialApi.getCelestialObjects(date);
+    setObjects(celestialObjects);
+  }
+
+  // useEffect(() => {
+  //   async function getCelestialObjects() {
+  //     const celestialObjects = await celestialApi.getCelestialObjects(date);
+  //     setObjects(celestialObjects);
+  //   }
+  //   getCelestialObjects();
+  // }, []);
 
   const renderObjects = () => {
     if (objects.length) {
@@ -29,9 +35,10 @@ function JmCelestial() {
 
   return (
     <div className="JmCelestial">
-      <JmDateTimePicker date={date} onDateSelection={setDate}/>
+      <JmDateTimePicker className="JmCelestial__date-time" date={date} onDateSelection={setDate}/>
       {/* <JmLocationPicker/> */}
       {/* <JmCombobox/> */}
+      <JmButton text={'Fetch objects'} onClick={getCelestialObjects}/>
       <ul>{ renderObjects() }</ul>
     </div>
   );

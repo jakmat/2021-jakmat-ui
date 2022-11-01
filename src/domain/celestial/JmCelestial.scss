@@ -1,0 +1,17 @@
+@import '../../styles/common';
+
+.JmCelestial {
+  background-color: $appBackgroundColor;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+
+  .JmCelestial__date-time {
+    color: white;
+  }
+
+  .JmButton {
+    justify-content: center;
+  }
+}
