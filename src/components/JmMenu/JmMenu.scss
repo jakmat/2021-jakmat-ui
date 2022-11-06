@@ -1,0 +1,16 @@
+@import '../../styles/common';
+
+.JmMenu {
+  display: flex;
+  flex-direction: column;
+  //background-color: $contentBackgroundColor;
+  padding: $appPadding;
+  border-radius: $appBorderRadius;
+
+  .JmMenuItem {
+    display: flex;
+    //background-color: $contentBackgroundColor;
+    border-radius: $appBorderRadius;
+    cursor: pointer;
+  }
+}

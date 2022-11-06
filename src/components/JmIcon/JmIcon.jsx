@@ -6,7 +6,8 @@ import LanguageIcon from '@material-ui/icons/Language';
 import BuildIcon from '@material-ui/icons/Build';
 import HomeIcon from '@material-ui/icons/Home';
 import LinkIcon from '@material-ui/icons/Link';
-
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 
 const materialIcons = {
   copyright: <CopyrightIcon/>,
@@ -14,7 +15,9 @@ const materialIcons = {
   build: <BuildIcon/>,
   home: <HomeIcon/>,
   link: <LinkIcon/>,
-  language: <LanguageIcon/>
+  language: <LanguageIcon/>,
+  checkboxChecked: <CheckBoxIcon/>,
+  checkboxUnchecked: <CheckBoxOutlineBlankIcon/>
 };
 
 function JmIcon(props) {

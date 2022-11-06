@@ -16,8 +16,8 @@ function JmApp() {
     projects: JmProjects,
     lab: JmLab
   };
-  const [currentContent, setCurrentContent] = useState(JmAbout);
-  const [activeButtonId, setActiveButtonId] = useState('about');
+  const [currentContent, setCurrentContent] = useState(JmLab);
+  const [activeButtonId, setActiveButtonId] = useState('lab');
   const handleViewChange = (content) => {
     setActiveButtonId(content);
     setCurrentContent(contents[content]);

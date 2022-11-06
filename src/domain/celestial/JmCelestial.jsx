@@ -3,14 +3,21 @@ import './JmCelestial.scss';
 import celestialApi from "./celestial.api";
 import JmDateTimePicker from "../../components/JmDateTimePicker/JmDateTimePicker";
 import JmButton from "../../components/JmButton/JmButton";
+import JmCombobox from "../../components/JmCombobox/JmCombobox";
+import celestialType from "../../domain/celestial/celestial.type";
 
 function JmCelestial() {
   const [date, setDate] = useState(Date.now());
-  const [objects, setObjects] = useState([{}]);
+  const [objects, setObjects] = useState([]);
+
 
   const getCelestialObjects = async () => {
     const celestialObjects = await celestialApi.getCelestialObjects(date);
     setObjects(celestialObjects);
+  }
+
+  const handleSelection = (selection) => {
+    console.log(selection);
   }
 
   // useEffect(() => {
@@ -37,7 +44,11 @@ function JmCelestial() {
     <div className="JmCelestial">
       <JmDateTimePicker className="JmCelestial__date-time" date={date} onDateSelection={setDate}/>
       {/* <JmLocationPicker/> */}
-      {/* <JmCombobox/> */}
+      <JmCombobox
+        items={celestialType.celestialObjects}
+        onSelection={handleSelection}
+        label={'Celestial Objects'}
+        placeholder={'Select Celestial Objects'}/>
       <JmButton text={'Fetch objects'} onClick={getCelestialObjects}/>
       <ul>{ renderObjects() }</ul>
     </div>

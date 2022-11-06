@@ -1,0 +1,35 @@
+@import '../../styles/common';
+
+.JmCombobox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: $appPadding;
+  border-radius: $appBorderRadius;
+
+
+  .JmCombobox__label {
+    padding: 5px $appPadding;
+  }
+
+  .JmCombobox__input {
+    display: flex;
+    width: 100%;
+    border: 1px solid $contentBackgroundColor;
+    border-radius: $appBorderRadius;
+    cursor: pointer;
+
+    .JmCombobox__placeholder {
+      padding: $appPadding;
+      user-select: none;
+    }
+
+    .JmCombobox__chips {
+
+    }
+  }
+
+  .JmCombobox__menu {
+
+  }
+}
