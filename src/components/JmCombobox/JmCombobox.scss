@@ -18,6 +18,7 @@
     border: 1px solid $contentBackgroundColor;
     border-radius: $appBorderRadius;
     cursor: pointer;
+    margin-bottom: 1px;
 
     .JmCombobox__placeholder {
       padding: $appPadding;
@@ -25,7 +26,8 @@
     }
 
     .JmCombobox__chips {
-
+      display: flex;
+      align-items: center;
     }
   }
 

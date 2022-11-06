@@ -9,15 +9,17 @@ import celestialType from "../../domain/celestial/celestial.type";
 function JmCelestial() {
   const [date, setDate] = useState(Date.now());
   const [objects, setObjects] = useState([]);
+  const [selectedObjects, setSelectedObjects] = useState([]);
 
 
   const getCelestialObjects = async () => {
-    const celestialObjects = await celestialApi.getCelestialObjects(date);
+    const objects = celestialType.celestialObjects.filter(object => selectedObjects.includes(object.id));
+    const celestialObjects = await celestialApi.getCelestialObjects(objects, date);
     setObjects(celestialObjects);
   }
 
   const handleSelection = (selection) => {
-    console.log(selection);
+    setSelectedObjects(selection);
   }
 
   // useEffect(() => {

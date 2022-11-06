@@ -1,0 +1,8 @@
+@import '../../styles/common';
+
+.JmChip {
+  padding: 5px $appPadding;
+  margin: 3px;
+  background-color: $contentBackgroundColor;
+  border-radius: $appBorderRadius;
+}

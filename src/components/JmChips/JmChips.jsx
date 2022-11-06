@@ -1,5 +1,5 @@
 import React from 'react';
-// import './JmChips.scss';
+import './JmChips.scss';
 
 const JmChip = (props) => {
   const { id, name } = props;

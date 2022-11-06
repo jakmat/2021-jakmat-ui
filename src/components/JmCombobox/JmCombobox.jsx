@@ -1,23 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './JmCombobox.scss';
 import JmChips from "../JmChips/JmChips";
 import JmMenu from "../JmMenu/JmMenu";
 
 function JmCombobox(props) {
+  const { items, label, placeholder, onSelection } = props;
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
-  const { items, label, placeholder, onSelection } = props;
+
   const handleSelection = (id) => {
     if (selectedItems.includes(id)) setSelectedItems(selectedItems.filter(item => item !== id));
     else setSelectedItems([...selectedItems, id]);
-    onSelection(selectedItems);
   };
 
-  const chips = JmChips({ items, selectedItems });
-  const menu = isMenuOpened ? JmMenu({ items, selectedItems, onSelection: handleSelection }) : null;
   const handleInputClick = () => {
     setIsMenuOpened(!isMenuOpened);
   }
+
+  useEffect(() => {
+    onSelection(selectedItems);
+  }, [selectedItems]);
+
+  const chips = JmChips({ items, selectedItems });
+  const menu = isMenuOpened ? JmMenu({ items, selectedItems, onSelection: handleSelection }) : null;
+
   return (
     <div className="JmCombobox">
       <label className="JmCombobox__label">{ label }</label>
