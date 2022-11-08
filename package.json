@@ -5,7 +5,7 @@
   "private": true,
   "proxy": "http://185.201.115.103:5050",
   "scripts": {
-    "start": "react-app-env --env-file=./env/.env.local start",
+    "serve": "react-app-env --env-file=./env/.env.local start",
     "build:lab": "react-app-env --env-file=./env/.env.lab build",
     "build:staging": "react-app-env --env-file=./env/.env.staging build",
     "build:production": "react-app-env --env-file=./env/.env.production build",

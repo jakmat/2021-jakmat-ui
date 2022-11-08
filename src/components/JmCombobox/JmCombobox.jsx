@@ -4,7 +4,7 @@ import JmChips from "../JmChips/JmChips";
 import JmMenu from "../JmMenu/JmMenu";
 
 function JmCombobox(props) {
-  const { items, label, placeholder, onSelection } = props;
+  const { items, label, onSelection } = props;
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
 
@@ -21,14 +21,15 @@ function JmCombobox(props) {
     onSelection(selectedItems);
   }, [selectedItems]);
 
-  const chips = JmChips({ items, selectedItems });
+  const placeholder = selectedItems.length ? null : <span className={"JmPlaceholder"}>{ props.placeholder }</span>;
+  const chips = selectedItems.length ? JmChips({ items, selectedItems, onRemove: handleSelection }) : null;
   const menu = isMenuOpened ? JmMenu({ items, selectedItems, onSelection: handleSelection }) : null;
 
   return (
     <div className="JmCombobox">
       <label className="JmCombobox__label">{ label }</label>
       <div className="JmCombobox__input" onClick={handleInputClick}>
-        <span className="JmCombobox__placeholder">{ placeholder }</span>
+        <div className="JmCombobox__placeholder">{ placeholder }</div>
         <div className="JmCombobox__chips">{ chips }</div>
       </div>
       <div className="JmCombobox__menu">{ menu }</div>

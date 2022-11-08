@@ -8,6 +8,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import LinkIcon from '@material-ui/icons/Link';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import CloseIcon from '@material-ui/icons/Close';
 
 const materialIcons = {
   copyright: <CopyrightIcon/>,
@@ -17,14 +18,15 @@ const materialIcons = {
   link: <LinkIcon/>,
   language: <LanguageIcon/>,
   checkboxChecked: <CheckBoxIcon/>,
-  checkboxUnchecked: <CheckBoxOutlineBlankIcon/>
+  checkboxUnchecked: <CheckBoxOutlineBlankIcon/>,
+  close: <CloseIcon/>
 };
 
 function JmIcon(props) {
-  const { icon, fontSize } = props;
+  const { icon, fontSize, onClick } = props;
   const materialIcon = React.cloneElement(materialIcons[icon], { style: { fontSize } });
   return (
-    <i className="JmIcon">{materialIcon}</i>
+    <i className="JmIcon" onClick={onClick}>{materialIcon}</i>
   );
 }
 

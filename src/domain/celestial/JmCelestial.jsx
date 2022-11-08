@@ -49,9 +49,9 @@ function JmCelestial() {
       <JmCombobox
         items={celestialType.celestialObjects}
         onSelection={handleSelection}
-        label={'Celestial Objects'}
-        placeholder={'Select Celestial Objects'}/>
-      <JmButton text={'Fetch objects'} onClick={getCelestialObjects}/>
+        label={'Select Celestial Objects'}
+        placeholder={'No Celestial Objects...'}/>
+      <JmButton text={'Fetch objects'} isActive="{ selectedObjects.length }" onClick={getCelestialObjects}/>
       <ul>{ renderObjects() }</ul>
     </div>
   );

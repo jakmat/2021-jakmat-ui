@@ -3,7 +3,6 @@ import celestialMapper from "./celestial.mapper";
 const getCelestialObjects = async (objects, time) => {
   const objectCodes = objects.map(object => object.code);
   const objectQueryString = objectCodes.join(',');
-  const object = 'sun,moon';
   const timeSeconds = time.valueOf() / 1000;
   const timestamp = timeSeconds.toFixed();
   const lat = '52n';
