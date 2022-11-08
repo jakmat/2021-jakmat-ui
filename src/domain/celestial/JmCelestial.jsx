@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './JmCelestial.scss';
 import celestialApi from "./celestial.api";
+import celestialType from "../../domain/celestial/celestial.type";
 import JmDateTimePicker from "../../components/JmDateTimePicker/JmDateTimePicker";
 import JmCombobox from "../../components/JmCombobox/JmCombobox";
 import JmLocationPicker from "../../components/JmLocationPicker/JmLocationPicker";
 import JmButton from "../../components/JmButton/JmButton";
-import celestialType from "../../domain/celestial/celestial.type";
 
 function JmCelestial() {
   const [date, setDate] = useState(Date.now());
@@ -16,21 +16,13 @@ function JmCelestial() {
 
   const getCelestialObjects = async () => {
     const objects = celestialType.celestialObjects.filter(object => selectedObjects.includes(object.id));
-    const celestialObjects = await celestialApi.getCelestialObjects(objects, date);
+    const celestialObjects = await celestialApi.getCelestialObjects(objects, date, location);
     setObjects(celestialObjects);
   }
 
   const handleSelection = (selection) => {
     setSelectedObjects(selection);
   }
-
-  // useEffect(() => {
-  //   async function getCelestialObjects() {
-  //     const celestialObjects = await celestialApi.getCelestialObjects(date);
-  //     setObjects(celestialObjects);
-  //   }
-  //   getCelestialObjects();
-  // }, []);
 
   const renderObjects = () => {
     if (objects.length) {
