@@ -40,9 +40,9 @@ function JmCelestial() {
 
   return (
     <div className="JmCelestial">
-      <div className={"JmCelestial__map"}>
-        <JmLocationPicker location={initialLocation} zoom={initialZoom} onLocationSelection={setLocation}/>
-      </div>
+      {/*<div className={"JmCelestial__map"}>*/}
+      {/*  <JmLocationPicker location={initialLocation} zoom={initialZoom} onLocationSelection={setLocation}/>*/}
+      {/*</div>*/}
       <div className={"JmCelestial__filters"}>
         <JmDateTimePicker className="JmCelestial__date-time" date={date} onDateSelection={setDate}/>
         <JmCombobox
