@@ -53,7 +53,7 @@ function JmCelestial() {
           isMenuOpened={true}
           label={'Select Celestial Objects'}
           placeholder={'No Celestial Objects...'}/>
-        <JmButton text={'Display Objects'} isActive={!!selectedObjects.length} onClick={getCelestialObjects}/>
+        <JmButton text={'Display Objects'} isDisabled={!selectedObjects.length} onClick={getCelestialObjects}/>
       </div>
       <div className={"JmCelestial__sky"}>
         <ul>{ renderObjects() }</ul>
