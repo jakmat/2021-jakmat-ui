@@ -7,11 +7,14 @@
   padding: $appPadding;
   border-radius: $appBorderRadius;
   cursor: pointer;
+  text-select: none;
 
   &:not(&--active) {
-    &:hover {
-      background-color: $contentBackgroundColorHover;
-    }
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $contentBackgroundColorHover;
   }
 
   &--active {

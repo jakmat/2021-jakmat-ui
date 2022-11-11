@@ -5,8 +5,8 @@ import 'leaflet/dist/leaflet.css';
 
 
 function JmLocationPicker(props) {
-  const { onLocationSelection } = props;
-  const [location, setLocation] = useState([51.76822, 19.45743]);
+  const [location, setLocation] = useState(props.location);
+  const [zoom, setZoom] = useState(props.zoom);
   let map = null;
   let marker = null
 
@@ -21,7 +21,6 @@ function JmLocationPicker(props) {
   useEffect(() => {
     const root = document.getElementById('JmLocationPickerMap');
     root.innerHTML = "<div id='map' style='width: 100%; height: 100%;'></div>";
-    const zoom = 16;
     map = L.map('map', { center: location, zoom });
     map.on('click', handleLocationSelection);
 
@@ -31,7 +30,7 @@ function JmLocationPicker(props) {
   });
 
   useEffect(() => {
-    onLocationSelection(location);
+    props.onLocationSelection(location);
   }, [location]);
 
   return (

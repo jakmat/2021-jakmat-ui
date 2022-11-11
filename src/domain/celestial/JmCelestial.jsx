@@ -8,10 +8,12 @@ import JmLocationPicker from "../../components/JmLocationPicker/JmLocationPicker
 import JmButton from "../../components/JmButton/JmButton";
 
 function JmCelestial() {
+  const initialLocation = [52, 19];
+  const initialZoom = 5;
   const [date, setDate] = useState(Date.now());
   const [objects, setObjects] = useState([]);
   const [selectedObjects, setSelectedObjects] = useState([]);
-  const [location, setLocation] = useState([]);
+  const [location, setLocation] = useState(initialLocation);
 
 
   const getCelestialObjects = async () => {
@@ -38,15 +40,24 @@ function JmCelestial() {
 
   return (
     <div className="JmCelestial">
-      <JmDateTimePicker className="JmCelestial__date-time" date={date} onDateSelection={setDate}/>
-      <JmLocationPicker onLocationSelection={setLocation}/>
-      <JmCombobox
-        items={celestialType.celestialObjects}
-        onSelection={handleSelection}
-        label={'Select Celestial Objects'}
-        placeholder={'No Celestial Objects...'}/>
-      <JmButton text={'Fetch objects'} isActive="{ selectedObjects.length }" onClick={getCelestialObjects}/>
-      <ul>{ renderObjects() }</ul>
+      <div className={"JmCelestial__map"}>
+        <JmLocationPicker location={initialLocation} zoom={initialZoom} onLocationSelection={setLocation}/>
+      </div>
+      <div className={"JmCelestial__filters"}>
+        <JmDateTimePicker className="JmCelestial__date-time" date={date} onDateSelection={setDate}/>
+        <JmCombobox
+          items={celestialType.celestialObjects}
+          onSelection={handleSelection}
+          hasInput={false}
+          hasMenu={true}
+          isMenuOpened={true}
+          label={'Select Celestial Objects'}
+          placeholder={'No Celestial Objects...'}/>
+        <JmButton text={'Display Objects'} isActive={!!selectedObjects.length} onClick={getCelestialObjects}/>
+      </div>
+      <div className={"JmCelestial__sky"}>
+        <ul>{ renderObjects() }</ul>
+      </div>
     </div>
   );
 }

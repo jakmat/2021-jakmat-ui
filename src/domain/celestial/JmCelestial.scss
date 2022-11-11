@@ -1,19 +1,37 @@
 @import '../../styles/common';
 
 .JmCelestial {
-  //width: 320px;
+  width: 100%;
+  min-height: 645px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: $appBackgroundColor;
-  padding: 15px;
+  padding: $appPadding;
   gap: 15px;
 
-  .JmLocationPicker {
-    margin-bottom: 30px;
+  .JmCelestial__map {
+    width: 280px;
+    height: 540px;
+    padding: 0 5px;
+    margin-bottom: 30px
   }
 
-  .JmButton {
-    align-self: flex-end;
+  .JmCelestial__filters {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px;
+    gap: 20px;
+  }
+
+  .JmCelestial__sky {
+    width: 800px;
+    height: 570px;
+    margin: 15px 0 0;
+    padding: 0 5px;
+    background-color: $contentBackgroundColor;
   }
 }
