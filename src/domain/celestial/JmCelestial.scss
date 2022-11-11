@@ -11,6 +11,7 @@
   background-color: $appBackgroundColor;
   padding: $appPadding;
   gap: 15px;
+  pointer-events: none;
 
   .JmCelestial__filters {
     width: 280px;
@@ -21,6 +22,7 @@
     padding: 0 5px 15px;
     gap: 20px;
     background-color: $contentBackgroundColor;
+    pointer-events: auto;
   }
 
   .JmCelestial__sky {
@@ -29,5 +31,6 @@
     margin: 15px 0 0;
     padding: 0 5px;
     background-color: $contentBackgroundColor;
+    pointer-events: auto;
   }
 }

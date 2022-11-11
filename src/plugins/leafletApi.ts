@@ -2,7 +2,7 @@ import {
   map, Map, MapOptions,
   tileLayer, TileLayer, TileLayerOptions
 } from 'leaflet';
-import {MapApiOptions, MapCoords} from "../domain/map/mapApi.type";
+import { MapApiOptions } from "../domain/map/mapApi.type";
 
 const getMap = (id: string, mapApiOptions: MapApiOptions): Map => {
   const { centerCoords, zoomLevel } = mapApiOptions;

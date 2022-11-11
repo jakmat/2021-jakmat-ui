@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './JmLab.scss';
-import JmCelestial from "../../../domain/celestial/JmCelestial";
-import JmMap from '../../../domain/map/JmMap/JmMap.tsx';
+import JmDashboard from "../../../domain/dashboard/JmDashboard.tsx";
 
 function JmLab() {
   return (
     <section className="JmLab">
-      <JmMap/>
-      <JmCelestial/>
+      <JmDashboard/>
     </section>
   );
 }

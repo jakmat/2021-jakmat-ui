@@ -1,12 +1,12 @@
-import celestialMapper from "./celestial.mapper";
+import celestialMapper from "./celestial.mapper.ts";
 
 const parseLocation = (location) => {
   const digits = 3;
-  const [lat, lon] = location;
-  const latValue = lat.toFixed(digits);
-  const latHemisphere = lat < 0 ? 's' : 'n';
-  const lonValue = lon.toFixed(digits);
-  const lonHemisphere = lat < 0 ? 'w' : 'e';
+  const { latitude, longitude } = location;
+  const latValue = latitude.toFixed(digits);
+  const latHemisphere = latitude < 0 ? 's' : 'n';
+  const lonValue = longitude.toFixed(digits);
+  const lonHemisphere = longitude < 0 ? 'w' : 'e';
   return {
     latitude: `${latValue}${latHemisphere}`,
     longitude: `${lonValue}${lonHemisphere}`
