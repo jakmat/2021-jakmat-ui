@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './JmApp.scss';
-import JmHeader from "../JmHeader/JmHeader";
-import JmNav from "../JmNav/JmNav";
-import JmMain from "../JmMain/JmMain";
-import JmFooter from "../JmFooter/JmFooter";
+import JmHeader from "../JmHeader/JmHeader.tsx";
+import JmNav from "../JmNav/JmNav.tsx";
+import JmMain from "../JmMain/JmMain.tsx";
+import JmFooter from "../JmFooter/JmFooter.tsx";
 import JmAbout from "../../views/about/JmAbout";
 import JmStack from "../../views/stack/JmStack";
 import JmProjects from "../../views/projects/JmProjects";
