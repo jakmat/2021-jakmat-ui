@@ -2,20 +2,15 @@
 
 .JmCelestial {
   width: 100%;
-  min-height: 645px;
+  height: 100%;
+  //min-height: 645px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
   background-color: $appBackgroundColor;
   padding: $appPadding;
   gap: 15px;
-
-  .JmCelestial__map {
-    width: 280px;
-    height: 540px;
-    padding: 0 5px;
-    margin-bottom: 30px
-  }
 
   .JmCelestial__filters {
     width: 280px;
@@ -23,13 +18,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 5px;
+    padding: 0 5px 15px;
     gap: 20px;
+    background-color: $contentBackgroundColor;
   }
 
   .JmCelestial__sky {
     width: 800px;
-    height: 570px;
+    height: 597px;
     margin: 15px 0 0;
     padding: 0 5px;
     background-color: $contentBackgroundColor;

@@ -7,7 +7,7 @@ import JmFooter from "../JmFooter/JmFooter.tsx";
 import JmAbout from "../../views/about/JmAbout";
 import JmStack from "../../views/stack/JmStack";
 import JmProjects from "../../views/projects/JmProjects";
-import JmLab from "../../views/lab/JmLab";
+import JmLab from "../../views/lab/JmLab.tsx";
 
 function JmApp() {
   const contents = {

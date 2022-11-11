@@ -1,5 +1,5 @@
-import leafletApi from "../plugins/leafletApi";
-import { MapApiOptions } from './mapApi.type';
+import leafletApi from "../../plugins/leafletApi.ts";
+import { MapApiOptions } from './mapApi.type.ts';
 
 const mapApi = {
   instances: {},
@@ -11,12 +11,14 @@ const mapApi = {
       mapRoot: null,
       mapElement: null,
       map: null,
+      handlers: {},
       mount() {
         this.mapRoot = document.getElementById(this.id);
         this.element = document.createElement('div');
         this.element.id = this.id;
         this.element.style = { width: '100%', height: '100%' };
-        this.mapRoot.innerHTML = this.mapElement;
+        this.mapRoot.appendChild(this.element);
+        this.mapElement = this.mapElement;
         this.map = leafletApi.getMap(this.id, {
           centerCoords: this.centerCoords,
           zoomLevel: this.zoomLevel
@@ -26,15 +28,21 @@ const mapApi = {
         this.map = null;
         this.mapElement = null;
       },
-      addOpenStreetMapTileLayer() {
+      addOpenStreetMapLayer() {
         leafletApi.addOpenStreetMapLayerToMap(this.map);
+      },
+      registerLocationSelectionClickEventHandler(handler) {
+        leafletApi.registerLocationSelectionClickEventHandler(this.map, handler);
       }
     }
   },
   initialize(id: string, options: MapApiOptions) {
-    if (this.instances[id]) throw Error ('Map instance already exists');
-    this.instances[id] = this.constructor(id, options);
-    this.instances[id].mount();
+    if (!this.instances[id]) {
+      this.instances[id] = this.constructor(id, options);
+      this.instances[id].mount();
+      return this.instances[id];
+    }
+    return this.instances[id];
   },
   destroy(mapId: string) {
     if (!this.instances[mapId]) throw Error ('Map instance does not exist');

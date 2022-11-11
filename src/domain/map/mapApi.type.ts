@@ -1,9 +1,9 @@
-type CenterCoords = {
+export type MapCoords = {
   latitude: number;
   longitude: number;
 }
 
 export interface MapApiOptions {
-  centerCoords: CenterCoords;
+  centerCoords: MapCoords;
   zoomLevel: number;
 }

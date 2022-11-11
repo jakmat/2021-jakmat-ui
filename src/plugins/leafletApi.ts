@@ -2,7 +2,7 @@ import {
   map, Map, MapOptions,
   tileLayer, TileLayer, TileLayerOptions
 } from 'leaflet';
-import { MapApiOptions } from "../viz/mapApi.type";
+import {MapApiOptions, MapCoords} from "../domain/map/mapApi.type";
 
 const getMap = (id: string, mapApiOptions: MapApiOptions): Map => {
   const { centerCoords, zoomLevel } = mapApiOptions;
@@ -27,9 +27,25 @@ const addOpenStreetMapLayerToMap = (mapInstance: Map): void => {
   addTileLayerToMap(openStreetMapTileLayer, mapInstance);
 };
 
+const registerEventHandler = (mapInstance: Map, eventType: string, handler: Function) => {
+  mapInstance.on(eventType, handler);
+};
+
+const registerLocationSelectionClickEventHandler = (mapInstance: Map, handler: Function) => {
+  const setCoords = (mapClickEvent) => {
+    const { lat, lng } = mapClickEvent.latlng;
+    handler({
+      latitude: lat,
+      longitude: lng
+    });
+  }
+  registerEventHandler(mapInstance, 'click', setCoords);
+};
+
 const leafletApi = {
   getMap,
-  addOpenStreetMapLayerToMap
+  addOpenStreetMapLayerToMap,
+  registerLocationSelectionClickEventHandler
 };
 
 export default leafletApi;

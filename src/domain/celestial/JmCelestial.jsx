@@ -4,7 +4,6 @@ import celestialApi from "./celestial.api";
 import celestialType from "../../domain/celestial/celestial.type";
 import JmDateTimePicker from "../../components/JmDateTimePicker/JmDateTimePicker";
 import JmCombobox from "../../components/JmCombobox/JmCombobox";
-import JmLocationPicker from "../../components/JmLocationPicker/JmLocationPicker";
 import JmButton from "../../components/JmButton/JmButton";
 
 function JmCelestial() {
