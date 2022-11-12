@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './JmMap.scss';
 import 'leaflet/dist/leaflet.css'; // TODO: Move to styles
-import mapApi from '../mapApi.ts';
-import { MapCoords } from '../mapApi.type.ts';
+import jmMapApi from './jmMap.api.ts';
+import { MapCoords } from './jmMap.type.ts';
 
 function JmMap(props) {
   const initialLocation: MapCoords = props.location;
@@ -16,10 +16,10 @@ function JmMap(props) {
   };
 
   useEffect(() => {
-    const map = mapApi.initialize(id, initialLocation);
+    const map = jmMapApi.initialize(id, initialLocation);
     map.addOpenStreetMapLayer();
     map.registerLocationSelectionClickEventHandler(handleLocationSelection);
-    return mapApi.destroy(id);
+    return jmMapApi.destroy(id);
   }, [id]);
 
   return <div className={id} style={{ width: '100%', height: '100%' }}></div>;

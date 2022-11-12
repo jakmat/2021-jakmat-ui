@@ -1,0 +1,10 @@
+@import '../../../styles/common';
+
+.JmChart {
+  width: 800px;
+  height: 597px;
+  margin: 15px 0 0;
+  padding: $appPadding;
+  background-color: $contentBackgroundColor;
+  pointer-events: auto;
+}

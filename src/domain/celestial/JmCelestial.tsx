@@ -5,6 +5,7 @@ import celestialType from "./celestial.type.ts";
 import JmDateTimePicker from "../../components/JmDateTimePicker/JmDateTimePicker";
 import JmCombobox from "../../components/JmCombobox/JmCombobox";
 import JmButton from "../../components/JmButton/JmButton";
+import JmChart from "./JmChart/JmChart.tsx";
 
 function JmCelestial(props) {
   const [date, setDate] = useState(Date.now());
@@ -12,9 +13,7 @@ function JmCelestial(props) {
   const [selectedObjects, setSelectedObjects] = useState([]);
   const [location, setLocation] = useState(props.location);
 
-
   const getCelestialObjects = async () => {
-    console.log(props.location);
     const objects = celestialType.celestialObjects.filter(object => selectedObjects.includes(object.id));
     const celestialObjects = await celestialApi.getCelestialObjects(objects, date, props.location);
     setObjects(celestialObjects);
@@ -23,22 +22,6 @@ function JmCelestial(props) {
   const handleSelection = (selection) => {
     setSelectedObjects(selection);
   }
-
-  const renderObjects = () => {
-    if (objects.length) {
-      const celestialObjects = objects.map((object, index) => {
-        const { name, azimuth, altitude } = object;
-        return <li key={index}>
-          <span>{ name } (az: {azimuth}, alt: {altitude})</span>
-        </li>;
-      });
-      return (
-        <div className={"JmCelestial__sky"}>
-          <ul>{ celestialObjects }</ul>
-        </div>
-      );
-    }
-  };
 
   return (
     <div className="JmCelestial">
@@ -54,7 +37,7 @@ function JmCelestial(props) {
           placeholder={'No Celestial Objects...'}/>
         <JmButton text={'Display Objects'} isDisabled={!selectedObjects.length || !location} onClick={getCelestialObjects}/>
       </div>
-      { renderObjects() }
+      <JmChart objects={objects}/>
     </div>
   );
 }

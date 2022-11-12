@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './JmDashboard.scss';
 import JmCelestial from "../celestial/JmCelestial.tsx";
-import JmMap from '../map/JmMap/JmMap.tsx';
+import JmMap from '../map/JmMap.tsx';
 import { MapCoords } from "../map/mapApi.type";
 
 function JmDashboard() {
