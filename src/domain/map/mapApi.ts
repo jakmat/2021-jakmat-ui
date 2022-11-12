@@ -1,13 +1,16 @@
 import leafletApi from "../../plugins/leafletApi.ts";
-import { MapApiOptions } from './mapApi.type.ts';
+import { MapApiOptions, MapCoords } from './mapApi.type.ts';
 
 const mapApi = {
   instances: {},
-  constructor(id: string, options: MapApiOptions) {
+  constructor(id: string, initialLocation: MapCoords) {
     return {
       id,
-      centerCoords: options.centerCoords,
-      zoomLevel: options.zoomLevel,
+      options: {
+        centerCoords: initialLocation,
+        zoomLevel: 5,
+        keepMapInBounds: true
+      },
       mapRoot: null,
       mapElement: null,
       map: null,
@@ -19,10 +22,7 @@ const mapApi = {
         this.element.style = { width: '100%', height: '100%' };
         this.mapRoot.appendChild(this.element);
         this.mapElement = this.mapElement;
-        this.map = leafletApi.getMap(this.id, {
-          centerCoords: this.centerCoords,
-          zoomLevel: this.zoomLevel
-        });
+        this.map = leafletApi.getMap(this.id, this.options);
       },
       unmount() {
         this.map = null;
@@ -42,6 +42,7 @@ const mapApi = {
       this.instances[id].mount();
       return this.instances[id];
     }
+    console.log('initialize');
     return this.instances[id];
   },
   destroy(mapId: string) {

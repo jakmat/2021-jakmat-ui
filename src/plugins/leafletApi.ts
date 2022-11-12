@@ -4,12 +4,25 @@ import {
 } from 'leaflet';
 import { MapApiOptions } from "../domain/map/mapApi.type";
 
+const getMapBoundsSetup = (keepMapInBounds: boolean) => {
+  if (!keepMapInBounds) return {};
+  return {
+    minZoom: 3,
+    maxBoundsViscosity: 1,
+    maxBounds: [
+      [90, -180],
+      [-90, 180]
+    ]
+  };
+};
+
 const getMap = (id: string, mapApiOptions: MapApiOptions): Map => {
-  const { centerCoords, zoomLevel } = mapApiOptions;
+  const { centerCoords, zoomLevel, keepMapInBounds } = mapApiOptions;
   const { latitude, longitude } = centerCoords;
   const options: MapOptions = {
     center: [latitude, longitude],
-    zoom: zoomLevel
+    zoom: zoomLevel,
+    ...getMapBoundsSetup(keepMapInBounds)
   };
   return map(id, options);
 };
@@ -34,6 +47,7 @@ const registerEventHandler = (mapInstance: Map, eventType: string, handler: Func
 const registerLocationSelectionClickEventHandler = (mapInstance: Map, handler: Function) => {
   const setCoords = (mapClickEvent) => {
     const { lat, lng } = mapClickEvent.latlng;
+    console.log(lat.toFixed(), lng.toFixed());
     handler({
       latitude: lat,
       longitude: lng

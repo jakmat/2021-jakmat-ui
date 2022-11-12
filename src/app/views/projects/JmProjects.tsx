@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import JmList from "../../../components/JmList/JmList";
+import jmHooks from "../../../components/jmHooks.tsx";
 
-function JmProjects() {
+function JmProjects(props) {
   const projects = [
     {
       id: 1,
@@ -122,8 +123,13 @@ function JmProjects() {
       }
     }
   ];
+  const [visibility, setVisibility] = useState(jmHooks.useVisibility('projects', props.view.id));
+  useEffect(() => {
+     const updatedVisibility = jmHooks.useVisibility('projects', props.view.id);
+     setVisibility(updatedVisibility);
+  }, [props.view]);
   return (
-    <section className="JmProjects">
+    <section className="JmProjects" style={visibility}>
       <h3>Jobs and projects of my career are concerned with Web Development, Mapping and GIS.</h3>
       <JmList items={projects}/>
     </section>

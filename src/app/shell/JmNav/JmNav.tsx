@@ -21,7 +21,7 @@ function JmNav(props) {
   }
   const handleButtonClick = (viewId) => {
     setActiveButtonId(viewId);
-    props.onNavClick(viewId);
+    props.onViewChange(viewId);
   }
   return (
     <nav className="JmNav">

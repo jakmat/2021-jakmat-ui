@@ -4,29 +4,23 @@ import JmHeader from "../JmHeader/JmHeader.tsx";
 import JmNav from "../JmNav/JmNav.tsx";
 import JmMain from "../JmMain/JmMain.tsx";
 import JmFooter from "../JmFooter/JmFooter.tsx";
-import JmAbout from "../../views/about/JmAbout";
-import JmStack from "../../views/stack/JmStack";
-import JmProjects from "../../views/projects/JmProjects";
-import JmLab from "../../views/lab/JmLab.tsx";
 
 function JmApp() {
   const contents = {
-    about: JmAbout,
-    stack: JmStack,
-    projects: JmProjects,
-    lab: JmLab
+    stack: { id: 'stack', className: 'JmStack' },
+    projects: { id: 'projects', className: 'JmProjects' },
+    about: { id: 'about', className: 'JmAbout' },
+    lab: { id: 'lab', className: 'JmLab' }
   };
-  const [currentContent, setCurrentContent] = useState(JmLab);
-  const [activeButtonId, setActiveButtonId] = useState('lab');
-  const handleViewChange = (content) => {
-    setActiveButtonId(content);
-    setCurrentContent(contents[content]);
+  const [view, setView] = useState(contents.lab);
+  const handleViewChange = (id) => {
+    setView(contents[id]);
   };
   return (
     <div className="JmApp">
       <JmHeader/>
-      <JmNav activeButtonId={activeButtonId} onNavClick={handleViewChange}/>
-      <JmMain children={currentContent}/>
+      <JmNav activeButtonId={view.id} onViewChange={handleViewChange}/>
+      <JmMain view={view}/>
       <JmFooter/>
     </div>
   );

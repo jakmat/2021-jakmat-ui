@@ -6,4 +6,5 @@ export type MapCoords = {
 export interface MapApiOptions {
   centerCoords: MapCoords;
   zoomLevel: number;
+  keepMapInBounds: boolean;
 }

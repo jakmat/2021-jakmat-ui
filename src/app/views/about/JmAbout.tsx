@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './JmAbout.scss';
 import JmIcon from "../../../components/JmIcon/JmIcon";
 import JmLink from "../../../components/JmLink/JmLink";
+import jmHooks from '../../../components/jmHooks.tsx';
 
-function JmAbout() {
+function JmAbout(props) {
   const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak-geospatial-web-developer.jpeg`;
   const picAlt = 'Jakub Matusiak Geospatial Web Developer photo';
   const icon = {
@@ -14,8 +15,13 @@ function JmAbout() {
     links: 'link'
   };
   const iconSize = '18px';
+  const [visibility, setVisibility] = useState(jmHooks.useVisibility('about', props.view.id));
+  useEffect(() => {
+     const updatedVisibility = jmHooks.useVisibility('about', props.view.id);
+     setVisibility(updatedVisibility);
+  }, [props.view]);
   return (
-    <section className="JmAbout">
+    <section className="JmAbout" style={visibility}>
       <h3>I'm passionate about Programming, Cartography and Urban Planning problematics.</h3>
       <article>
         <div className="JmAbout-text JmAbout-professional">

@@ -2,15 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './JmMap.scss';
 import 'leaflet/dist/leaflet.css'; // TODO: Move to styles
 import mapApi from '../mapApi.ts';
-import { MapApiOptions, MapCoords } from '../mapApi.type.ts';
+import { MapCoords } from '../mapApi.type.ts';
 
 function JmMap(props) {
-  const mapApiOptions: MapApiOptions = {
-    centerCoords: props.location,
-    zoomLevel: 5
-  };
-  const [id, setId] = useState('JmMap');
-  const [selectionCoords, setSelectionCoordsLocation] = useState(props.location);
+  const initialLocation: MapCoords = props.location;
+  const id = 'JmMap';
+  const [selectionCoords, setSelectionCoordsLocation] = useState(initialLocation);
 
   const handleLocationSelection = (selectionCoords: MapCoords) => {
     setSelectionCoordsLocation(selectionCoords);
@@ -18,7 +15,7 @@ function JmMap(props) {
   };
 
   useEffect(() => {
-    const map = mapApi.initialize(id, mapApiOptions);
+    const map = mapApi.initialize(id, initialLocation);
     map.addOpenStreetMapLayer();
     map.registerLocationSelectionClickEventHandler(handleLocationSelection);
   }, [id]);

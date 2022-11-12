@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import JmList from "../../../components/JmList/JmList";
+import jmHooks from "../../../components/jmHooks.tsx";
 
-function JmStack() {
+function JmStack(props) {
   const stack = [
     {
       id: '188cd8ec-ff0d-4726-8e62-726552b18fc3',
@@ -299,8 +300,13 @@ function JmStack() {
       details: 'ArcGIS, MapInfo, QGIS, digital cartography and spatial queries'
     }
   ];
+  const [visibility, setVisibility] = useState(jmHooks.useVisibility('stack', props.view.id));
+  useEffect(() => {
+     const updatedVisibility = jmHooks.useVisibility('stack', props.view.id);
+     setVisibility(updatedVisibility);
+  }, [props.view]);
   return (
-    <section className="JmStack">
+    <section className="JmStack" style={visibility}>
       <h3>My stack comprises technologies for Modern Frontend Development and Visualizing Geospatial Data on Maps.</h3>
       <JmList items={stack}/>
     </section>
