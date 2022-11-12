@@ -1,5 +1,5 @@
 import leafletApi from "../../plugins/leafletApi.ts";
-import { MapApiOptions, MapCoords } from './jmMap.type.ts';
+import { MapCoords } from './jmMap.type.ts';
 
 const jmMapApi = {
   instances: {},
@@ -37,18 +37,18 @@ const jmMapApi = {
       }
     }
   },
-  initialize(id: string, options: MapApiOptions) {
+  initialize(id: string, initialLocation: MapCoords) {
     if (!this.instances[id]) {
-      this.instances[id] = this.constructor(id, options);
+      this.instances[id] = this.constructor(id, initialLocation);
       this.instances[id].mount();
       return this.instances[id];
     }
     return this.instances[id];
   },
-  destroy(mapId: string) {
-    if (this.instances[mapId]) {
-      this.instances[mapId].unmount();
-      delete this.instances[mapId];
+  destroy(id: string) {
+    if (this.instances[id]) {
+      this.instances[id].unmount();
+      delete this.instances[id];
     }
   }
 };

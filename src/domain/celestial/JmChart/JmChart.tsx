@@ -1,26 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './JmChart.scss';
+import jmChartApi from "./jmChart.api.ts";
 
 function JmChart(props) {
+  const id = 'JmChart';
   const [objects, setObjects] = useState('');
-  const renderObjects = () => {
-    if (props.objects.length) {
-      const celestialObjects = props.objects.map((object, index) => {
-        const { name, azimuth, altitude } = object;
-        return <li key={index}>
-          <span>{ name } (az: {azimuth}, alt: {altitude})</span>
-        </li>;
-      });
-      return celestialObjects;
-    }
-  };
 
   useEffect(() => {
-    const renderedObjects = renderObjects();
-    setObjects(renderedObjects);
-  }, [props.objects]);
+    setObjects(props.objects);
+    const chart = jmChartApi.initialize(id);
+    chart.add(objects);
+    return jmChartApi.destroy(id);
+  }, [id]);
 
-  return <ul className="JmChart">{ objects }</ul>;
+  return <div className={id}></div>;
 }
 
 export default JmChart;
