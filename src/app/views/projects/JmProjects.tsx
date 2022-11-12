@@ -123,13 +123,8 @@ function JmProjects(props) {
       }
     }
   ];
-  const [visibility, setVisibility] = useState(jmHooks.useVisibility('projects', props.view.id));
-  useEffect(() => {
-     const updatedVisibility = jmHooks.useVisibility('projects', props.view.id);
-     setVisibility(updatedVisibility);
-  }, [props.view]);
   return (
-    <section className="JmProjects" style={visibility}>
+    <section className="JmProjects">
       <h3>Jobs and projects of my career are concerned with Web Development, Mapping and GIS.</h3>
       <JmList items={projects}/>
     </section>

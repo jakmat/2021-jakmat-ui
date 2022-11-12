@@ -15,13 +15,8 @@ function JmAbout(props) {
     links: 'link'
   };
   const iconSize = '18px';
-  const [visibility, setVisibility] = useState(jmHooks.useVisibility('about', props.view.id));
-  useEffect(() => {
-     const updatedVisibility = jmHooks.useVisibility('about', props.view.id);
-     setVisibility(updatedVisibility);
-  }, [props.view]);
   return (
-    <section className="JmAbout" style={visibility}>
+    <section className="JmAbout">
       <h3>I'm passionate about Programming, Cartography and Urban Planning problematics.</h3>
       <article>
         <div className="JmAbout-text JmAbout-professional">

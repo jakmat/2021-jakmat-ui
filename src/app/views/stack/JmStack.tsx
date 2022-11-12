@@ -300,13 +300,8 @@ function JmStack(props) {
       details: 'ArcGIS, MapInfo, QGIS, digital cartography and spatial queries'
     }
   ];
-  const [visibility, setVisibility] = useState(jmHooks.useVisibility('stack', props.view.id));
-  useEffect(() => {
-     const updatedVisibility = jmHooks.useVisibility('stack', props.view.id);
-     setVisibility(updatedVisibility);
-  }, [props.view]);
   return (
-    <section className="JmStack" style={visibility}>
+    <section className="JmStack">
       <h3>My stack comprises technologies for Modern Frontend Development and Visualizing Geospatial Data on Maps.</h3>
       <JmList items={stack}/>
     </section>

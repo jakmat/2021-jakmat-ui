@@ -4,6 +4,12 @@ const useVisibility = (currentComponentId, clickedTabComponentId) => {
   return { visibility: 'hidden', width: 0, height: 0 };
 }
 
-const jmHooks = { useVisibility };
+const useDisplay = (currentComponentId, clickedTabComponentId) => {
+  const isComponentDisplayed = currentComponentId === clickedTabComponentId;
+  if (isComponentDisplayed) return { display: 'flex' };
+  return { display: 'block' };
+}
+
+const jmHooks = { useVisibility, useDisplay };
 
 export default jmHooks;
