@@ -16,7 +16,8 @@ const mapApi = {
       map: null,
       handlers: {},
       mount() {
-        this.mapRoot = document.getElementById(this.id);
+        const [mapRoot] = document.getElementsByClassName(this.id);
+        this.mapRoot = mapRoot;
         this.element = document.createElement('div');
         this.element.id = this.id;
         this.element.style = { width: '100%', height: '100%' };
@@ -40,16 +41,18 @@ const mapApi = {
     if (!this.instances[id]) {
       this.instances[id] = this.constructor(id, options);
       this.instances[id].mount();
+      console.log('initialize');
       return this.instances[id];
     }
-    console.log('initialize');
     return this.instances[id];
   },
   destroy(mapId: string) {
-    if (!this.instances[mapId]) throw Error ('Map instance does not exist');
-    this.instances[mapId].unmount();
-    delete this.instances[mapId];
-  },
+    console.log('destroy')
+    if (this.instances[mapId]) {
+      this.instances[mapId].unmount();
+      delete this.instances[mapId];
+    }
+  }
 };
 
 export default mapApi;
