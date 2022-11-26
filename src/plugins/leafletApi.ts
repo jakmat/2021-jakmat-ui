@@ -1,10 +1,13 @@
 import {
   map, Map, MapOptions,
-  tileLayer, TileLayer, TileLayerOptions
+  tileLayer, TileLayer, TileLayerOptions,
+  LeafletEventHandlerFn, LatLngTuple, LatLng, LeafletEvent
 } from 'leaflet';
-import { MapApiOptions } from "../domain/map/mapApi.type";
+import {MapApiOptions} from "../domain/map/jmMap.type";
 
-const getMapBoundsSetup = (keepMapInBounds: boolean) => {
+const getMapBoundsSetup = (keepMapInBounds: boolean): {
+  minZoom: number, maxBoundsViscosity: number, maxBounds: LatLngTuple[]
+} | {} => {
   if (!keepMapInBounds) return {};
   return {
     minZoom: 3,
@@ -17,8 +20,8 @@ const getMapBoundsSetup = (keepMapInBounds: boolean) => {
 };
 
 const getMap = (id: string, mapApiOptions: MapApiOptions): Map => {
-  const { centerCoords, zoomLevel, keepMapInBounds } = mapApiOptions;
-  const { latitude, longitude } = centerCoords;
+  const {centerCoords, zoomLevel, keepMapInBounds} = mapApiOptions;
+  const {latitude, longitude} = centerCoords;
   const options: MapOptions = {
     center: [latitude, longitude],
     zoom: zoomLevel,
@@ -40,12 +43,12 @@ const addOpenStreetMapLayerToMap = (mapInstance: Map): void => {
   addTileLayerToMap(openStreetMapTileLayer, mapInstance);
 };
 
-const registerEventHandler = (mapInstance: Map, eventType: string, handler: Function) => {
+const registerEventHandler = (mapInstance: Map, eventType: string, handler: LeafletEventHandlerFn) => {
   mapInstance.on(eventType, handler);
 };
 
 const registerLocationSelectionClickEventHandler = (mapInstance: Map, handler: Function) => {
-  const setCoords = (mapClickEvent) => {
+  const setCoords = (mapClickEvent: { latlng: { lat: number, lng: number } }) => {
     const { lat, lng } = mapClickEvent.latlng;
     console.log(lat.toFixed(), lng.toFixed());
     handler({
@@ -53,6 +56,7 @@ const registerLocationSelectionClickEventHandler = (mapInstance: Map, handler: F
       longitude: lng
     });
   }
+  // @ts-ignore
   registerEventHandler(mapInstance, 'click', setCoords);
 };
 

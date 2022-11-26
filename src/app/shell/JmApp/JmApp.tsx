@@ -1,13 +1,15 @@
+// @ts-nocheck // TODO: Add annotations
+
 import React, { useState } from 'react';
 import './JmApp.scss';
-import JmHeader from "../JmHeader/JmHeader.tsx";
-import JmNav from "../JmNav/JmNav.tsx";
-import JmMain from "../JmMain/JmMain.tsx";
-import JmFooter from "../JmFooter/JmFooter.tsx";
-import JmStack from "../../views/stack/JmStack.tsx";
-import JmProjects from "../../views/projects/JmProjects.tsx";
-import JmAbout from "../../views/about/JmAbout.tsx";
-import JmLab from "../../views/lab/JmLab.tsx";
+import JmHeader from "../JmHeader/JmHeader";
+import JmNav from "../JmNav/JmNav";
+import JmMain from "../JmMain/JmMain";
+import JmFooter from "../JmFooter/JmFooter";
+import JmStack from "../../views/stack/JmStack";
+import JmProjects from "../../views/projects/JmProjects";
+import JmAbout from "../../views/about/JmAbout";
+import JmLab from "../../views/lab/JmLab";
 
 function JmApp() {
   const contents = {

@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import './JmCelestial.scss';
-import celestialApi from "./celestial.api.ts";
-import celestialType from "./celestial.type.ts";
+import celestialApi from "./celestial.api";
+import celestialType from "./celestial.type";
 import JmDateTimePicker from "../../components/JmDateTimePicker/JmDateTimePicker";
 import JmCombobox from "../../components/JmCombobox/JmCombobox";
 import JmButton from "../../components/JmButton/JmButton";
-import JmChart from "./JmChart/JmChart.tsx";
+import JmChart from "./JmChart/JmChart";
+import { MapCoords } from "../map/jmMap.type";
 
-function JmCelestial(props) {
+type JmCelestialProps = {
+  location: MapCoords
+}
+
+function JmCelestial(props: JmCelestialProps) {
   const [date, setDate] = useState(Date.now());
-  const [objects, setObjects] = useState([]);
-  const [selectedObjects, setSelectedObjects] = useState([]);
+  const [objects, setObjects]: any[] = useState([]);
+  const [selectedObjects, setSelectedObjects]: any[] = useState([]);
   const [location, setLocation] = useState(props.location);
 
   const getCelestialObjects = async () => {
@@ -19,7 +24,7 @@ function JmCelestial(props) {
     setObjects(celestialObjects);
   }
 
-  const handleSelection = (selection) => {
+  const handleSelection = (selection: never[]) => {
     setSelectedObjects(selection);
   }
 

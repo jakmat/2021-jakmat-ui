@@ -1,9 +1,11 @@
-import leafletApi from "../../plugins/leafletApi.ts";
-import { MapCoords } from './jmMap.type.ts';
+// @ts-nocheck // TODO: Add annotations
+
+import leafletApi from "../../plugins/leafletApi";
+import {JmMapInstance, MapCoords} from './jmMap.type';
 
 const jmMapApi = {
   instances: {},
-  constructor(id: string, initialLocation: MapCoords) {
+  constructor(id: string, initialLocation: MapCoords): JmMapInstance {
     return {
       id,
       options: {

@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './JmChart.scss';
-import jmChartApi from "./jmChart.api.ts";
+import jmChartApi from "./jmChart.api";
+import {CelestialObject} from "../../map/jmMap.type";
 
-function JmChart(props) {
+type JmChartProps = {
+  objects: CelestialObject[]
+}
+
+function JmChart(props: JmChartProps) {
   const id = 'JmChart';
-  const [objects, setObjects] = useState('');
+  const [objects, setObjects]: any[] = useState('');
 
   useEffect(() => {
     setObjects(props.objects);

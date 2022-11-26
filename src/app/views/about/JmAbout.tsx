@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './JmAbout.scss';
 import JmIcon from "../../../components/JmIcon/JmIcon";
 import JmLink from "../../../components/JmLink/JmLink";
-import jmHooks from '../../../components/jmHooks.tsx';
+import jmHooks from '../../../components/jmHooks';
 
-function JmAbout(props) {
+function JmAbout() {
   const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak-geospatial-web-developer.jpeg`;
   const picAlt = 'Jakub Matusiak Geospatial Web Developer photo';
   const icon = {

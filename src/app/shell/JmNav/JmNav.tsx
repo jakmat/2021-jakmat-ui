@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import './JmNav.scss';
 import JmButton from '../../../components/JmButton/JmButton';
 
-function JmNav(props) {
+type JmNavProps = {
+  activeButtonId: string;
+  onViewChange: Function;
+};
+
+function JmNav(props: JmNavProps) {
   const nav = [
     { id: 'stack', text: 'Tech Stack' },
     { id: 'projects', text: 'Projects' },
@@ -19,7 +24,7 @@ function JmNav(props) {
         onClick={() => handleButtonClick(view.id)}/>
     });
   }
-  const handleButtonClick = (viewId) => {
+  const handleButtonClick = (viewId: string) => {
     setActiveButtonId(viewId);
     props.onViewChange(viewId);
   }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './JmDashboard.scss';
-import JmCelestial from "../celestial/JmCelestial.tsx";
-import JmMap from '../map/JmMap.tsx';
-import { MapCoords } from "../map/mapApi.type";
+import JmCelestial from "../celestial/JmCelestial";
+import JmMap from '../map/JmMap';
+import { MapCoords } from "../map/jmMap.type";
 
 function JmDashboard() {
   const centerCoords: MapCoords = { latitude: 52, longitude: 19 };

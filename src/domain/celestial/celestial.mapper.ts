@@ -1,4 +1,6 @@
-const mapCelestialObjects = (objects) => {
+import { CelestialObjectResponse } from "../map/jmMap.type";
+
+const mapCelestialObjects = (objects: CelestialObjectResponse[]) => {
   const mappedObjects = objects.map((object) => {
     return {
       name: object.objective,

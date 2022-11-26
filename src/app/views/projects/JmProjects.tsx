@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import JmList from "../../../components/JmList/JmList";
-import jmHooks from "../../../components/jmHooks.tsx";
 
-function JmProjects(props) {
+function JmProjects() {
   const projects = [
     {
       id: 1,

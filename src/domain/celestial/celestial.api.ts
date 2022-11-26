@@ -1,6 +1,7 @@
-import celestialMapper from "./celestial.mapper.ts";
+import celestialMapper from "./celestial.mapper";
+import {CelestialObject, MapCoords} from "../map/jmMap.type";
 
-const parseLocation = (location) => {
+const parseLocation = (location: MapCoords) => {
   const digits = 3;
   const { latitude, longitude } = location;
   const latValue = latitude.toFixed(digits);
@@ -13,7 +14,7 @@ const parseLocation = (location) => {
   };
 }
 
-const getCelestialObjects = async (objects, time, location) => {
+const getCelestialObjects = async (objects: CelestialObject[], time: number, location: MapCoords) => {
   const objectCodes = objects.map(object => object.code);
   const objectQueryString = objectCodes.join(',');
   const timeSeconds = time.valueOf() / 1000;

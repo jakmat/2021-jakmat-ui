@@ -1,3 +1,4 @@
+// @ts-nocheck // TODO: Add annotations
 // import d3Api from "../../plugins/d3Api.ts";
 
 const jmChartApi = {
@@ -11,13 +12,14 @@ const jmChartApi = {
       chart: null,
       handlers: {},
       mount() {
-        const [chartRoot] = document.getElementsByClassName(this.id);
+        const [chartRoot]: HTMLCollectionOf<any> = document.getElementsByClassName(this.id);
         this.chartRoot = chartRoot;
         this.element = document.createElement('div');
         this.element.id = this.id;
         this.element.style = { width: '100%', height: '100%' };
         this.chartRoot.appendChild(this.element);
         this.chartElement = this.chartElement;
+        // @ts-ignore
         this.chart = {}; //d3Api.getChart(this.id, this.options);
       },
       unmount() {

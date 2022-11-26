@@ -5,7 +5,11 @@ import './JmMain.scss';
 // import JmAbout from "../../views/about/JmAbout.tsx";
 // import JmLab from "../../views/lab/JmLab.tsx";
 
-function JmMain(props) {
+type JmMainProps = {
+  children: any
+};
+
+function JmMain(props: JmMainProps) {
   // const views = {
   //   stack: <JmStack view={props.view}/>,
   //   projects: <JmProjects view={props.view}/>,
