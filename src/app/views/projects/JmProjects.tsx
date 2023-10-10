@@ -10,7 +10,8 @@ function JmProjects() {
       endYear: null,
       name: 'Eloomi Infinite',
       avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/eloomi-jakub-matusiak-geospatial-web-developer.png`
+        src: `${process.env.PUBLIC_URL}/assets/projects/eloomi-jakub-matusiak-geospatial-web-developer.png`,
+        width: '140px'
       },
       details: 'E-learning and skills development platform. Vue.',
       url: {
