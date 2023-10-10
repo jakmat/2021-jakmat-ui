@@ -1,7 +1,14 @@
 import React from 'react';
 import './JmButton.scss';
 
-function JmButton(props) {
+type JmButtonProps = {
+  text: string;
+  onClick: () => void;
+  isActive?: boolean;
+  isDisabled?: boolean;
+};
+
+function JmButton(props: JmButtonProps) {
   const { text, onClick, isActive, isDisabled } = props;
   const classNames = `
   JmButton 

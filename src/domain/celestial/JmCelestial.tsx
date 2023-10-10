@@ -3,7 +3,7 @@ import './JmCelestial.scss';
 import celestialApi from "./celestial.api";
 import celestialType from "./celestial.type";
 import JmDateTimePicker from "../../components/JmDateTimePicker/JmDateTimePicker";
-import JmCombobox from "../../components/JmCombobox/JmCombobox";
+import JmCombobox, {JmListItem} from "../../components/JmCombobox/JmCombobox";
 import JmButton from "../../components/JmButton/JmButton";
 import JmChart from "./JmChart/JmChart";
 import { MapCoords } from "../map/jmMap.type";

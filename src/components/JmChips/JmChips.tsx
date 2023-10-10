@@ -1,8 +1,21 @@
 import React from 'react';
 import './JmChips.scss';
 import JmIcon from "../JmIcon/JmIcon";
+import {JmListItem} from "../JmCombobox/JmCombobox";
 
-const JmChip = (props) => {
+type JmChipProps = {
+  id: string;
+  name: string;
+  onRemove: (id: string) => void;
+};
+
+type JmChipsProps = {
+  items: JmListItem[];
+  selectedItems: string[];
+  onRemove: (id: string) => void;
+};
+
+const JmChip = (props: JmChipProps) => {
   const { id, name, onRemove } = props;
   const handleRemoval = () => {
     onRemove(id);
@@ -14,9 +27,9 @@ const JmChip = (props) => {
   </div>
 };
 
-function JmChips(props) {
+function JmChips(props: JmChipsProps) {
   const { items, selectedItems, onRemove } = props;
-  const chips = [];
+  const chips: React.ReactElement[] = [];
   items.forEach((item) => {
     const { id, name } = item;
     if (selectedItems.includes(id)) {

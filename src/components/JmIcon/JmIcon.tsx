@@ -10,7 +10,7 @@ import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CloseIcon from '@material-ui/icons/Close';
 
-const materialIcons = {
+const materialIcons: Record<string, React.ReactElement> = {
   copyright: <CopyrightIcon/>,
   work: <WorkIcon/>,
   build: <BuildIcon/>,
@@ -22,7 +22,13 @@ const materialIcons = {
   close: <CloseIcon/>
 };
 
-function JmIcon(props) {
+type JsIconProps = {
+  icon: string;
+  fontSize: string;
+  onClick?: () => void;
+}
+
+function JmIcon(props: JsIconProps) {
   const { icon, fontSize, onClick } = props;
   const materialIcon = React.cloneElement(materialIcons[icon], { style: { fontSize } });
   return (

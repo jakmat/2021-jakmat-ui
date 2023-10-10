@@ -1,9 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import JmList from "../../../components/JmList/JmList";
-import jmHooks from "../../../components/jmHooks";
+
+type JmStackItem = {
+  id: string;
+  startYear: string | number;
+  endYear: string | number | null;
+  name: string;
+  avatar: { src: string; height?: string; width?: string };
+  details: string;
+};
 
 function JmStack() {
-  const stack = [
+  const stack: JmStackItem[] = [
     {
       id: '188cd8ec-ff0d-4726-8e62-726552b18fc3',
       startYear: 2014,

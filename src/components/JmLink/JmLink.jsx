@@ -1,5 +1,4 @@
 import './JmLink.scss';
-import React from "react";
 
 function JmLink(props) {
   const { href, text } = props;

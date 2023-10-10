@@ -1,5 +1,3 @@
-// @ts-nocheck // TODO: Add annotations
-
 import React, { useState } from 'react';
 import './JmApp.scss';
 import JmHeader from "../JmHeader/JmHeader";
@@ -12,7 +10,7 @@ import JmAbout from "../../views/about/JmAbout";
 import JmLab from "../../views/lab/JmLab";
 
 function JmApp() {
-  const contents = {
+  const contents: Record<string, () => React.ReactElement> = {
     about: JmAbout,
     stack: JmStack,
     projects: JmProjects,
@@ -20,7 +18,7 @@ function JmApp() {
   };
   const [currentContent, setCurrentContent] = useState(JmLab);
   const [activeButtonId, setActiveButtonId] = useState('lab');
-  const handleViewChange = (content) => {
+  const handleViewChange = (content: string) => {
     setActiveButtonId(content);
     setCurrentContent(contents[content]);
   };

@@ -1,4 +1,3 @@
-import React from 'react';
 import './JmListItem.scss';
 import JmLink from "../../components/JmLink/JmLink";
 

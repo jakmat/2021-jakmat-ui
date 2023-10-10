@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './JmMenu.scss';
 import JmIcon from "../JmIcon/JmIcon";
 

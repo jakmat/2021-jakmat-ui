@@ -3,12 +3,29 @@ import './JmCombobox.scss';
 import JmChips from "../JmChips/JmChips";
 import JmMenu from "../JmMenu/JmMenu";
 
-function JmCombobox(props) {
-  const { items, label, onSelection, hasInput, hasMenu } = props;
-  const [isMenuOpened, setIsMenuOpened] = useState(props.isMenuOpened);
-  const [selectedItems, setSelectedItems] = useState([]);
+export type JmListItem = {
+  id: string,
+  // code?: string;
+  name: string,
+  onRemove?: (id: string) => void
+};
 
-  const handleSelection = (id) => {
+type JmComboboxProps = {
+  isMenuOpened: boolean;
+  hasInput: boolean;
+  hasMenu: boolean;
+  items: JmListItem[];
+  label: string;
+  onSelection: (items: string[]) => void;
+  placeholder: string;
+}
+
+function JmCombobox(props: JmComboboxProps) {
+  const { items, label, onSelection, hasInput, hasMenu } = props;
+  const [isMenuOpened, setIsMenuOpened] = useState<boolean>(props.isMenuOpened);
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
+
+  const handleSelection = (id: string) => {
     if (selectedItems.includes(id)) setSelectedItems(selectedItems.filter(item => item !== id));
     else setSelectedItems([...selectedItems, id]);
   };

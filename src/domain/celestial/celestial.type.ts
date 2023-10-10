@@ -1,4 +1,13 @@
-const celestialObjects = [
+import {JmListItem} from "../../components/JmCombobox/JmCombobox";
+import {CelestialObject} from "../map/jmMap.type";
+
+// export type CelestialObject = {
+//   code: string;
+//   id: string;
+//   name: string;
+// }
+
+const celestialObjects: CelestialObject[] = [
   { id: '1', code: 'sun', name: 'Sun' },
   { id: '2', code: 'mercury', name: 'Mercury' },
   { id: '3', code: 'venus', name: 'Venus' },

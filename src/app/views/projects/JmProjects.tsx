@@ -1,10 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import JmList from "../../../components/JmList/JmList";
 
 function JmProjects() {
   const projects = [
     {
       id: 1,
+      type: 'Contract',
+      startYear: 2023,
+      endYear: null,
+      name: 'Eloomi Infinite',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/projects/eloomi-jakub-matusiak-geospatial-web-developer.png`
+      },
+      details: 'E-learning and skills development platform. Vue.',
+      url: {
+        text: 'Go to website',
+        href: 'https://eloomi.com/'
+      }
+    },
+    {
+      id: 2,
       type: 'Project',
       startYear: 2021,
       endYear: null,
@@ -19,10 +34,10 @@ function JmProjects() {
       }
     },
     {
-      id: 2,
+      id: 3,
       type: 'Full time job',
       startYear: 2018,
-      endYear: null,
+      endYear: 2023,
       name: 'Leica ConX 3D',
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/leica-geosystems-jakub-matusiak-geospatial-web-developer.jpg`
@@ -34,7 +49,7 @@ function JmProjects() {
       }
     },
     {
-      id: 3,
+      id: 4,
       type: 'Project',
       startYear: 2018,
       endYear: 2020,
@@ -49,7 +64,7 @@ function JmProjects() {
       }
     },
     {
-      id: 4,
+      id: 5,
       type: 'Full time job',
       startYear: 2017,
       endYear: 2018,
@@ -63,7 +78,7 @@ function JmProjects() {
       }
     },
     {
-      id: 5,
+      id: 6,
       type: 'Freelance',
       startYear: 2016,
       endYear: 2018,
@@ -77,7 +92,7 @@ function JmProjects() {
       }
     },
     {
-      id: 6,
+      id: 7,
       type: 'E-commerce',
       startYear: 2014,
       endYear: 2017,
@@ -92,7 +107,7 @@ function JmProjects() {
       }
     },
     {
-      id: 7,
+      id: 8,
       type: 'Full time job',
       startYear: 2011,
       endYear: 2017,
@@ -108,7 +123,7 @@ function JmProjects() {
       }
     },
     {
-      id: 8,
+      id: 9,
       type: 'Internship',
       startYear: 2009,
       endYear: 2009,

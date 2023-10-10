@@ -1,5 +1,5 @@
 import 'date-fns';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { createMuiTheme } from '@material-ui/core/styles';
 import DateFnsUtils from '@date-io/date-fns';
