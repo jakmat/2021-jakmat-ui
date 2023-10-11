@@ -21,21 +21,6 @@ function JmProjects() {
     },
     {
       id: 2,
-      type: 'Project',
-      startYear: 2021,
-      endYear: null,
-      name: 'Personal Website v2.0',
-      avatar: {
-        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo-jakub-matusiak-geospatial-web-developer.png`
-      },
-      details: 'Current personal website and development lab. React.',
-      url: {
-        text: 'Go to Repository',
-        href: 'https://github.com/jakmat/2021-jakmat-ui'
-      }
-    },
-    {
-      id: 3,
       type: 'Full time job',
       startYear: 2018,
       endYear: 2023,
@@ -50,10 +35,25 @@ function JmProjects() {
       }
     },
     {
+      id: 3,
+      type: 'Project',
+      startYear: 2021,
+      endYear: null,
+      name: 'Personal Website v2.0',
+      avatar: {
+        src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo-jakub-matusiak-geospatial-web-developer.png`
+      },
+      details: 'Current personal website and development lab. React.',
+      url: {
+        text: 'Go to Repository',
+        href: 'https://github.com/jakmat/2021-jakmat-ui'
+      }
+    },
+    {
       id: 4,
       type: 'Project',
       startYear: 2018,
-      endYear: 2020,
+      endYear: 2021,
       name: 'Personal Website v1.0',
       avatar: {
         src: `${process.env.PUBLIC_URL}/assets/projects/jakmat-logo-jakub-matusiak-geospatial-web-developer.png`
