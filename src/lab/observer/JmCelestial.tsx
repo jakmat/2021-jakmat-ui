@@ -31,7 +31,7 @@ function JmCelestial(props: JmCelestialProps) {
   return (
     <div className="JmCelestial">
       <div className={"JmCelestial__filters"}>
-        <JmDateTimePicker className="JmCelestial__date-time" date={date} onDateSelection={setDate}/>
+        { /* <JmDateTimePicker className="JmCelestial__date-time" date={date} onDateSelection={setDate}/> */ }
         <JmCombobox
           items={celestialType.celestialObjects}
           onSelection={handleSelection}
