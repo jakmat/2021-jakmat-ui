@@ -1,25 +1,27 @@
 import React from 'react';
 import './JmIcon.scss';
-import CopyrightIcon from '@material-ui/icons/Copyright';
-import WorkIcon from '@material-ui/icons/Work';
-import LanguageIcon from '@material-ui/icons/Language';
-import BuildIcon from '@material-ui/icons/Build';
-import HomeIcon from '@material-ui/icons/Home';
-import LinkIcon from '@material-ui/icons/Link';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
-import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
-import CloseIcon from '@material-ui/icons/Close';
+import {
+    MdCopyright,
+    MdWork,
+    MdLanguage,
+    MdBuild,
+    MdHome,
+    MdLink,
+    MdCheckBox,
+    MdCheckBoxOutlineBlank,
+    MdClose,
+} from "react-icons/md";
 
 const materialIcons: Record<string, React.ReactElement> = {
-  copyright: <CopyrightIcon/>,
-  work: <WorkIcon/>,
-  build: <BuildIcon/>,
-  home: <HomeIcon/>,
-  link: <LinkIcon/>,
-  language: <LanguageIcon/>,
-  checkboxChecked: <CheckBoxIcon/>,
-  checkboxUnchecked: <CheckBoxOutlineBlankIcon/>,
-  close: <CloseIcon/>
+  copyright: <MdCopyright/>,
+  work: <MdWork/>,
+  build: <MdBuild/>,
+  home: <MdHome/>,
+  link: <MdLink/>,
+  language: <MdLanguage/>,
+  checkboxChecked: <MdCheckBox/>,
+  checkboxUnchecked: <MdCheckBoxOutlineBlank/>,
+  close: <MdClose/>
 };
 
 type JsIconProps = {
