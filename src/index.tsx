@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import './index.scss';
-import JmApp from "./app/shell/JmApp/JmApp";
+import JmApp from "./shell/JmApp/JmApp";
 import React from 'react';
 
 const container = document.getElementById('root');

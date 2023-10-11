@@ -1,0 +1,17 @@
+@import 'variables';
+
+.JmNav {
+  min-height: $headerHeight;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  color: $appFontColor;
+
+  .JmButton {
+    margin: 10px;
+    width: 150px;
+  }
+}

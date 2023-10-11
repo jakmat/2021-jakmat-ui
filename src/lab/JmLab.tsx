@@ -1,6 +1,6 @@
 import React from 'react';
 import './JmLab.scss';
-import JmDashboard from "../domain/dashboard/JmDashboard";
+import JmDashboard from "./dashboard/JmDashboard";
 
 function JmLab() {
   return (

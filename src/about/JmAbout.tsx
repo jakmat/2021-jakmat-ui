@@ -1,7 +1,7 @@
 import React from 'react';
 import './JmAbout.scss';
-import JmIcon from "../components/JmIcon/JmIcon";
-import JmLink from "../components/JmLink/JmLink";
+import JmIcon from "../common/components/JmIcon/JmIcon";
+import JmLink from "../common/components/JmLink/JmLink";
 
 function JmAbout() {
   const picSrc = `${process.env.PUBLIC_URL}/assets/about/jakub-matusiak-geospatial-web-developer.jpeg`;

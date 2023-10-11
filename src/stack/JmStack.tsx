@@ -1,5 +1,5 @@
 import React from 'react';
-import JmList from "../components/JmList/JmList";
+import JmList from "../common/components/JmList/JmList";
 
 type JmStackItem = {
   id: string;
