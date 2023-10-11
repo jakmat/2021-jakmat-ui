@@ -1,9 +1,20 @@
-// @ts-nocheck // TODO: Add annotations
-// import d3Api from "../../plugins/d3Api.ts";
+import d3Api from "./d3Api";
+
+type JmChart = {
+  id: string;
+  options: any;
+  chartRoot: Element | null;
+  chartElement: Element | null;
+  chart: null;
+  handlers: Record<string, () => void>
+  mount: () => void;
+  unmount: () => void;
+  add: (items: any) => void;
+};
 
 const jmChartApi = {
   instances: {},
-  constructor(id: string) {
+  constructor(id: string): JmChart {
     return {
       id,
       options: {},
@@ -12,15 +23,14 @@ const jmChartApi = {
       chart: null,
       handlers: {},
       mount() {
-        const [chartRoot]: HTMLCollectionOf<any> = document.getElementsByClassName(this.id);
-        this.chartRoot = chartRoot;
+        const chartRootElements = document.getElementsByClassName(this.id);
+        this.chartRoot = chartRootElements[0];
         this.element = document.createElement('div');
         this.element.id = this.id;
         this.element.style = { width: '100%', height: '100%' };
         this.chartRoot.appendChild(this.element);
         this.chartElement = this.chartElement;
-        // @ts-ignore
-        this.chart = {}; //d3Api.getChart(this.id, this.options);
+        this.chart = d3Api.getChart(this.id, this.options);
       },
       unmount() {
         this.chart = null;
