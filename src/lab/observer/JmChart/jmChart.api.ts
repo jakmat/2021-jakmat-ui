@@ -1,8 +1,8 @@
-import d3Api from "./d3Api";
+import d3Api, {D3ChartOptions} from "./d3Api";
 
 type JmChart = {
   id: string;
-  options: any;
+  options: D3ChartOptions;
   chartRoot: Element | null;
   chartElement: Element | null;
   chart: null;
@@ -17,7 +17,10 @@ const jmChartApi = {
   constructor(id: string): JmChart {
     return {
       id,
-      options: {},
+      options: {
+        type: 'linear',
+
+      },
       chartRoot: null,
       chartElement: null,
       chart: null,
