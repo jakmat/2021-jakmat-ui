@@ -1,5 +1,5 @@
 import React from 'react';
-import JmList from "../../../components/JmList/JmList";
+import JmList from "../components/JmList/JmList";
 
 function JmProjects() {
   const projects = [

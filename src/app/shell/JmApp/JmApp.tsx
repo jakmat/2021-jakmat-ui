@@ -4,10 +4,10 @@ import JmHeader from "../JmHeader/JmHeader";
 import JmNav from "../JmNav/JmNav";
 import JmMain from "../JmMain/JmMain";
 import JmFooter from "../JmFooter/JmFooter";
-import JmStack from "../../views/stack/JmStack";
-import JmProjects from "../../views/projects/JmProjects";
-import JmAbout from "../../views/about/JmAbout";
-import JmLab from "../../views/lab/JmLab";
+import JmStack from "../../../stack/JmStack";
+import JmProjects from "../../../projects/JmProjects";
+import JmAbout from "../../../about/JmAbout";
+import JmLab from "../../../lab/JmLab";
 
 function JmApp() {
   const contents: Record<string, () => React.ReactElement> = {

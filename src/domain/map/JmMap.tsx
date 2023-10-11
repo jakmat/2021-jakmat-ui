@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './JmMap.scss';
-import 'leaflet/dist/leaflet.css'; // TODO: Move to styles
+import 'leaflet/dist/leaflet.css'; // TODO: Move to common
 import jmMapApi from './jmMap.api';
 import { MapCoords } from './jmMap.type';
 

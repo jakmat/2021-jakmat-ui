@@ -1,6 +1,6 @@
 // @ts-nocheck // TODO: Add annotations
 
-import leafletApi from "../../plugins/leafletApi";
+import leafletApi from "../../lab/observer/leafletApi";
 import {JmMapInstance, MapCoords} from './jmMap.type';
 
 const jmMapApi = {

@@ -3,7 +3,7 @@ import {
   tileLayer, TileLayer, TileLayerOptions,
   LeafletEventHandlerFn, LatLngTuple, LatLng, LeafletEvent
 } from 'leaflet';
-import {MapApiOptions} from "../domain/map/jmMap.type";
+import {MapApiOptions} from "../../domain/map/jmMap.type";
 
 const getMapBoundsSetup = (keepMapInBounds: boolean): {
   minZoom: number, maxBoundsViscosity: number, maxBounds: LatLngTuple[]
