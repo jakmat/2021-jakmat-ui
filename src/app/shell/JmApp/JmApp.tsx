@@ -16,8 +16,16 @@ function JmApp() {
     projects: JmProjects,
     lab: JmLab
   };
-  const [currentContent, setCurrentContent] = useState(JmLab);
-  const [activeButtonId, setActiveButtonId] = useState('lab');
+
+  const isProductionEnv = process.env.NODE_ENV === 'production';
+  const initialView = {
+      id: isProductionEnv ? 'stack' : 'lab',
+      content: isProductionEnv ? JmStack : JmLab,
+  };
+
+  const [currentContent, setCurrentContent] = useState(initialView.content);
+  const [activeButtonId, setActiveButtonId] = useState(initialView.id);
+
   const handleViewChange = (content: string) => {
     setActiveButtonId(content);
     setCurrentContent(contents[content]);

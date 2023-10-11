@@ -12,8 +12,9 @@ function JmNav(props: JmNavProps) {
     { id: 'stack', text: 'Tech Stack' },
     { id: 'projects', text: 'Projects' },
     { id: 'about', text: 'About Me' },
-    { id: 'lab', text: 'Lab' }
   ];
+  if (process.env.NODE_ENV !== 'production') nav.push({ id: 'lab', text: 'Lab' });
+
   const [activeButtonId, setActiveButtonId] = useState('stack');
   const getNav = () => {
     return nav.map((view) => {
