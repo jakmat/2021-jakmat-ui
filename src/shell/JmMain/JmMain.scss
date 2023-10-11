@@ -1,0 +1,20 @@
+@import 'src/common/variables';
+
+.JmMain {
+  width: 100%;
+  min-height: $mainHeight;
+  display: flex;
+  flex-direction: column;
+  background-color: $contentBackgroundColor;
+  padding: $appPadding;
+  color: $appFontColor;
+
+  p {
+    text-align: left;
+    text-justify: inter-word;
+
+    a {
+      color: $appFontColor;
+    }
+  }
+}

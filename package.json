@@ -41,5 +41,7 @@
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "main": "dist/index",
+  "types": "dist/index"
 }

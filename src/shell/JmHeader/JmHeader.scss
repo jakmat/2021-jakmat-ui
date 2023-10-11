@@ -1,0 +1,33 @@
+@import 'src/common/variables';
+
+.JmHeader {
+  width: 320px;
+  max-height: $headerHeight;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: $appFontColor;
+  padding: $appPadding;
+
+  .JmHeader-logo {
+    height: 50px;
+  }
+
+  .JmHeader-headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: $appPadding;
+
+    .JmHeader-title {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .JmHeader-subtitle {
+      font-size: 0.8em;
+      margin: 0;
+    }
+  }
+}
